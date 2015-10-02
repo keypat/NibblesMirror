@@ -1,0 +1,8 @@
+Proof of Concept Demonstration Plan
+
+ - most difficult part of implementation will be applying the MCV model and modularizing the code
+ 	-> code is very simple atm
+
+ - pygame requires that you have a 32-bit version of python, may cause some people problems
+
+ - 
