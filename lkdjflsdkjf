@@ -1,0 +1,24 @@
+[33mcommit feb61185fcf5140114485883ec076e0449140254[m
+Author: Shafeeq Rabbani <rabbass@mcmaster.ca>
+Date:   Wed Sep 30 01:43:56 2015 -0400
+
+    first commit here
+
+[33mcommit b53379a9ec7b44fe1d15c49990d77c089b31a75a[m
+Merge: cfebcf5 6c4cef9
+Author: Alexander Guerrero <guerreap@mcmaster.ca>
+Date:   Tue Sep 29 17:47:09 2015 -0400
+
+    nibbles.py
+
+[33mcommit cfebcf56fdd845d4e117df7befafc9c5f75f1975[m
+Author: Alexander Guerrero <guerreap@mcmaster.ca>
+Date:   Tue Sep 29 17:08:56 2015 -0400
+
+    Original game file.
+
+[33mcommit 6c4cef9950d284816b1f0d5d3768f62bd8b44ace[m
+Author: Keyur Patel <patelk36@mcmaster.ca>
+Date:   Tue Sep 29 17:02:32 2015 -0400
+
+    add README

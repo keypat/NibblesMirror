@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+
+\usepackage{xcolor} % for different colour comments
+
+%% Comments
+\newif\ifcomments\commentsfalse
+
+\ifcomments
+\newcommand{\authornote}[3]{\textcolor{#1}{[#3 ---#2]}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\else
+\newcommand{\authornote}[3]{}
+\newcommand{\todo}[1]{}
+\fi
+
+\newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
+\newcommand{\ag}[1]{\authornote{blue}{AG}{#1}} % Shafeeq
+\newcommand{\kp}[1]{\authornote{blue}{KP}{#1}} % Keyur
+\newcommand{\sr}[1]{\authornote{blue}{SR}{#1}} % Alex
+
+\begin{document}
+
+\title{Proof of Concept Demonstration Plan} 
+\author{Alex Guerrero - guerreap\\Keyur Patel - patelk36\\Shafeeq Rabbani - rabbass}
+\date{October 2, 2015}
+	
+\maketitle
+	When building programs there are always going to be risks that will hinder the project. To ensure the success of the project the associated risks must be identified and what is to be done should a certain risk occur, be well documented.\par
+	All team members are familiar with and have programmed in the past using Python. However, it is not their strongest language of any of the team members. Furthermore, neither of the team members have previously used PyGame. To overcome this barrier, all team members will familiarize themselves with the functions used in the original code and work together as a team to redevelop the program.\par
+	Another risk is applying the Model View Controller (MVC) model. Again all team members are familiar with the model, but redeveloping the code to fit this model while also modularizing the code may prove to be more difficult than anticipated. To ensure the redevelopment of this project happens a a timely manner, a Gantt Chart to track progress identifying what areas would need more attention and collaboration.\par
+	Unit testing will be easily accomplished with PyUnit. The graphical aspect of the game will require user testing. The potential risk here due to the fact that user testing can only be carried out on a finished product. Considering the short time line of this project, it may not be possible to get user feedback and implement improvements. The Gantt chart will aid this in terms of scheduling. If need be, the graphics of game will be simplified and few of the the additional features planned ahead will be removed to ensure the game is ready for user testing. 	 
+	 Users will have to run the game through the 32-bit version of python installed on their computers along with PyGame. The potential risk here is that it can lead to all sorts of compatibility issues. Though it is not hard to install 32-bit Python, it can hinder user testing. Further risks may be that users are not willing to install the required software. If such is the case, users will be given an opportunity to test the game on the team members' personal laptops.\par
+
+
+\ag{Sample comment}
+\kp{Sample comment}
+\sr{Sample comment}
+
+\end{document}
+
