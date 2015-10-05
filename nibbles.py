@@ -29,9 +29,11 @@ screen = pygame.display.set_mode(size)
 font = pygame.font.Font(None, 14)
 
 snake_dir, food, dead = down, None, False
-snake = [pygame.Rect(10, 10 + value * 10, 10, 10) for value in range(20)]
+# starting pos. Rect(x, y, width, height)                      initial length
+snake = [pygame.Rect(240, 10 + value * 10, 10, 10) for value in range(20)]
 foreground, background = (255, 255, 255), (0, 0, 0)
-
+    
+# infinite loop, count = 0 -> 1 -> 2 -> 3 -> etc.
 for counter in count():
     clock.tick(min(5 + (len(snake) / 4), 30))
 
@@ -60,11 +62,12 @@ for counter in count():
     if dead:
         continue
 
+    # movement(where next block will be drawn) and border
     next = snake[-1].move(snake_dir)
-    if next.left < 0: next.left = width - 10
-    if next.left >= width: next.left = 0
-    if next.top < 0: next.top = height - 10
-    if next.top >= height: next.top = 0
+    if next.left < 0: next = snake[0]
+    if next.left >= width: next = snake[0]
+    if next.top < 0: next = snake[0]
+    if next.top >= height: next = snake[0]
 
     if next in snake:
         dead = True
@@ -86,6 +89,6 @@ for counter in count():
     if food:
         pygame.draw.rect(screen, foreground, food)
     surface = font.render(str(len(snake)), True, foreground)
-    screen.blit(surface, (0, 0))
+    screen.blit(surface, (460, 0))
 
     pygame.display.flip()
