@@ -123,19 +123,82 @@ Manual testing is done by people. It involves code walkthroughs and inspection. 
 Automatic testing can usually be conducted by computers. The tools used to assist with automatic are unit testing tools for the respective programming language. Automatic testing relies on people for testing more qualitative aspects like GUI. 
 
 
-\section{Approach}
+\section{Testing functional requirements}
 
-\subsection{Testing functional requirements}
-\textbf{THE REQUIREMENT}
+\noindent
+\subsection{Checking status of the game}
 \subsubsection*{Test Type}
+Automatic, dynamic, and functional testing
 \subsubsection*{Test Factors Involved}
 \subsubsection*{Initial State}
+The game board will have the snake and the border coordinates instantiated. The head coordinate of the snake will be adjacent to the border 
 \subsubsection*{Inputs}
+none
 \subsubsection*{Outputs}
+gameEnded returns the value true
 \subsubsection*{Schedule}
+Since this test is critical to the simulation, it is scheduled after the Map.py class is coded
 \subsubsection*{Methodology}
+This test will be conducted automatically by using PyUnit. A game state will be generated and the Snake will be moved into the wall
 \subsubsection*{Test For}
+This will test the functionality of the gameEnded function \newline
 
+\noindent
+\subsection{Game ends if snake collides with itself}
+\subsubsection*{Test Type}
+Manual, functional dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with the snake displayed on screen.
+\subsubsection*{Inputs}
+Keyboard directions
+\subsubsection*{Outputs}
+Game over game state
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure that making the snake collide with its own body will end the game.
+\subsubsection*{Test For}
+The test the functionality of the snake move logic and game state flow. \newline
+
+\noindent
+\subsection{The snake grows by one unit when it eats food}
+\subsubsection*{Test Type}
+Manual, functional dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with Food and Snake object instantiated.
+\subsubsection*{Inputs}
+Keyboard input to get snake to food
+\subsubsection*{Outputs}
+len(Snake.points) will increase by one
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure that making the snake eat a Food object.
+\subsubsection*{Test For}
+The test the functionality of the Snake.grow() method. \newline
+
+\noindent
+\subsection{Snake must be controlled by the keyboard}
+\subsubsection*{Test Type}
+Manual, functional dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with the snake displayed on screen moving in the default direction.
+\subsubsection*{Inputs}
+Keyboard buttons: W, A, S, D, and directional buttons (up, down, left, right). 
+\subsubsection*{Outputs}
+Depending on the current direction, the snake will either turn and change direction or do nothing.
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure all keys behave properly for every direction the snake can move.
+\subsubsection*{Test For}
+The test the functionality of the snake move logic and controller handling keyboard events.\newline
 
 
 \subsection{Test Cases for Snake.py}
