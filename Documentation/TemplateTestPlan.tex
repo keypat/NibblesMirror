@@ -86,7 +86,7 @@
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
-%	1.) General Information 
+%	1. General Information 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -104,9 +104,23 @@ The different items to be tested includes:
 
 \section{Software Risk Issues}
 
+The pre-existing code is to be redeveloped into modules as per the Model-View-Controller pattern for implementing interfaces. Modularizing the code may prove to be more time consuming than previously anticipated and hence, the code may not be ready in time to meet the deadline. As testing is dependent code, an incomplete code would bring the risk of incomplete or unattempted testing.
+
+The test cases may miss out some scenarios that result in errors in runtime.
+
+
 \section{Features to be Tested}
 
+As the first stage of our project redevelopment was to modularize the existing code, every single module in the implementation will be tested.
+
+As per the Model-View-Controller pattern, the model consists of the game environment with all the game rules. The controller is used to input commands into the environment. The view is the GUI of the game made by the graphics available in the PyGame package.
+
+The model portion contains classes Snake, Food, Map and Boundary classes. These classes will have to be tested.
+
+The Controller contains both keyboard inputs and mouse click inputs. This can be tested by giving the controller the appropriate keyboard and mouse inputs and seeing that it responds accordingly.
+
 \section{Features not to be Tested}
+
 
 
 \section{Testing Types}
@@ -149,12 +163,39 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 	\end{longtable}
 \end{center}
 
-
-
-
 \subsection{Test Cases for Map.py}
+
+\subsubsection*{Test Type}
+\subsubsection*{Test Factors Involved}
+\subsubsection*{Initial State}
+\subsubsection*{Inputs}
+\subsubsection*{Outputs}
+\subsubsection*{Schedule}
+\subsubsection*{Methodology}
+\subsubsection*{Test For}
+
+
 \subsection{Test Cases for Food.py}
+
+\subsubsection*{Test Type}
+\subsubsection*{Test Factors Involved}
+\subsubsection*{Initial State}
+\subsubsection*{Inputs}
+\subsubsection*{Outputs}
+\subsubsection*{Schedule}
+\subsubsection*{Methodology}
+\subsubsection*{Test For}
+
 \subsection{Testing for GUI}
+
+\subsubsection*{Test Type}
+\subsubsection*{Test Factors Involved}
+\subsubsection*{Initial State}
+\subsubsection*{Inputs}
+\subsubsection*{Outputs}
+\subsubsection*{Schedule}
+\subsubsection*{Methodology}
+\subsubsection*{Test For}
 
 
 
