@@ -86,7 +86,7 @@
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
-%	1. General Information 
+%	1.) General Information 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -104,23 +104,9 @@ The different items to be tested includes:
 
 \section{Software Risk Issues}
 
-The pre-existing code is to be redeveloped into modules as per the Model-View-Controller pattern for implementing interfaces. Modularizing the code may prove to be more time consuming than previously anticipated and hence, the code may not be ready in time to meet the deadline. As testing is dependent code, an incomplete code would bring the risk of incomplete or unattempted testing.
-
-The test cases may miss out some scenarios that result in errors in runtime.
-
-
 \section{Features to be Tested}
 
-As the first stage of our project redevelopment was to modularize the existing code, every single module in the implementation will be tested.
-
-As per the Model-View-Controller pattern, the model consists of the game environment with all the game rules. The controller is used to input commands into the environment. The view is the GUI of the game made by the graphics available in the PyGame package.
-
-The model portion contains classes Snake, Food, Map and Boundary classes. These classes will have to be tested.
-
-The Controller contains both keyboard inputs and mouse click inputs. This can be tested by giving the controller the appropriate keyboard and mouse inputs and seeing that it responds accordingly.
-
 \section{Features not to be Tested}
-
 
 
 \section{Testing Types}
@@ -135,6 +121,38 @@ Dynamic testing involves test cases to be run and checked against expected outco
 \subsection{Manual vs. Automatic Testing}
 Manual testing is done by people. It involves code walkthroughs and inspection. \newline\newline
 Automatic testing can usually be conducted by computers. The tools used to assist with automatic are unit testing tools for the respective programming language. Automatic testing relies on people for testing more qualitative aspects like GUI. 
+
+\section{Test Factors}
+
+\subsection{Reliability}
+\begin{itemize}
+\item Produces similar results under consistent conditions
+\item Test Techniques: unit testing, player testing, requirements
+\end{itemize}
+
+\subsection{Correctness}
+\begin{itemize}
+\item Shows the correct behaviour (expected output) for each input
+\item Test Techniques: unit testing, player testing, requirements
+\end{itemize}
+
+\subsection{Ease of Use}
+\begin{itemize}
+\item Ability of a user to naturally operate software
+\item Test Techniques: player testing, requirements
+\end{itemize}
+
+\subsection{Maintainable}
+\begin{itemize}
+\item Ease to which the code can be maintained
+\item Test Techniques: requirements
+\end{itemize}
+
+\subsection{Performance}
+\begin{itemize}
+\item Responsiveness of system to user input and stability during various workloads
+\item Test Techniques: stress, player testing
+\end{itemize}
 
 
 \section{Testing functional requirements}
@@ -179,7 +197,7 @@ The test the functionality of the snake move logic and game state flow. \newline
 \noindent
 \subsection{The snake grows by one unit when it eats food}
 \subsubsection*{Test Type}
-Manual, functional dynamic test
+Manual, structural dynamic test
 \subsubsection*{Test Factors Involved}
 Correctness
 \subsubsection*{Initial State}
@@ -214,7 +232,27 @@ This test will be done manually by the developers. The code will be run and test
 \subsubsection*{Test For}
 The test the functionality of the snake move logic and controller handling keyboard events.\newline
 
+\noindent
+\subsection{Calculate a score based on the length of the snake}
+\subsubsection*{Test Type}
+Automatic, dynamic, and functional testing
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+The game board will have the snake and the border coordinates instantiated.
+\subsubsection*{Inputs}
+none
+\subsubsection*{Outputs}
+game score should be the same as length of the snake
+\subsubsection*{Schedule}
+This test is critical to the correct functionality of the game, and will be tested once implemented
+\subsubsection*{Methodology}
+This test will be conducted automatically by using PyUnit. A game state will be generated and the current score will be checked against the current length of the snake
+\subsubsection*{Test For}
+This will test the functionality ofthe scoring system for the project. \newline
 
+
+\section{Future Testing}
 \subsection{Test Cases for Snake.py}
 
 \begin{center}
@@ -226,44 +264,17 @@ The test the functionality of the snake move logic and controller handling keybo
 	\end{longtable}
 \end{center}
 
+
+
+
 \subsection{Test Cases for Map.py}
-
-\subsubsection*{Test Type}
-\subsubsection*{Test Factors Involved}
-\subsubsection*{Initial State}
-\subsubsection*{Inputs}
-\subsubsection*{Outputs}
-\subsubsection*{Schedule}
-\subsubsection*{Methodology}
-\subsubsection*{Test For}
-
-
 \subsection{Test Cases for Food.py}
-
-\subsubsection*{Test Type}
-\subsubsection*{Test Factors Involved}
-\subsubsection*{Initial State}
-\subsubsection*{Inputs}
-\subsubsection*{Outputs}
-\subsubsection*{Schedule}
-\subsubsection*{Methodology}
-\subsubsection*{Test For}
-
 \subsection{Testing for GUI}
 
-\subsubsection*{Test Type}
-\subsubsection*{Test Factors Involved}
-\subsubsection*{Initial State}
-\subsubsection*{Inputs}
-\subsubsection*{Outputs}
-\subsubsection*{Schedule}
-\subsubsection*{Methodology}
-\subsubsection*{Test For}
 
 
 
-
-\bibliographystyle {plain}
-\bibliography {PCM_SRS}
+%\bibliographystyle {plain}
+%\bibliography {TemplateTestPlan}
 
 \end{document}
