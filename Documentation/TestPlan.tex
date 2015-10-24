@@ -103,11 +103,21 @@ The different items to be tested includes:
 \end{itemize}
 
 \section{Software Risk Issues}
+The pre-existing code is to be redeveloped into modules as per the Model-View-Controller pattern for implementing interfaces. Modularizing the code may prove to be more time consuming than previously anticipated and hence, the code may not be ready in time to meet the deadline. As testing is dependent code, an incomplete code would bring the risk of incomplete or unattempted testing.
 
+The test cases may miss out some scenarios that result in errors in runtime.
 \section{Features to be Tested}
+As the first stage of our project redevelopment was to modularize the existing code, every single module in the implementation will be tested.
 
+As per the Model-View-Controller pattern, the model consists of the game environment with all the game rules. The controller is used to input commands into the environment. The view is the GUI of the game made by the graphics available in the PyGame package.
+
+The model portion contains classes Snake, Food, Map and Boundary classes. These classes will have to be tested.
+
+The Controller contains both keyboard inputs and mouse click inputs. This can be tested by giving the controller the appropriate keyboard and mouse inputs and seeing that it responds accordingly.
+
+For the testing of View, the GUI will have to be tested to ensure that it appears appealing and exactly as intended. This will be left for User testing.
 \section{Features not to be Tested}
-
+Functions are to be added to the snake class in the future to allow for the intangibility feature, sacrifice feature and freeze feature. These are not currently being developed and hence are not a part of the current testing.
 
 \section{Testing Types}
 Testing can be broken up into different types, which each have their own role in the testing the product. These test types should be utilized to comprehensively evaluate the quality of the product.
