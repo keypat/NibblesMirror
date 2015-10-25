@@ -1,3 +1,8 @@
+import PlayMap
+import pygame
+import GameOver
+
+
 class MainMenu :
     MENU = ['menu','game','gameOver']
 
@@ -12,13 +17,22 @@ class MainMenu :
     #change value of self.state
     def changeState(self,newState) :
         self.state = newState
-        updateState()
+        if self.state==MENU[0]:
+            
+        if self.state==MENU[1]:
+            gameMap = PlayMap()
+        if self.state==MENU[2]:
+            gameOver = GameOver(gameMap.score
         
     #call necessary functions based on current state
     def updateState(self) :
         if self.state==MENU[0] :
 
         if self.state==MENU[1] :
-            gameMap = Map()
+            gameMap.updateState()
+            return gameMap.getCurrentState()
+        if self.state==MENU[2] :
+            gameOver.updateState(gameMap.score)
+            return gameOver.getCurrentState()
             
         
