@@ -1,38 +1,47 @@
-import PlayMap
+from PlayMap import *
 import pygame
-import GameOver
+from GameOver import *
 
 
 class MainMenu :
-    MENU = ['menu','game','gameOver']
+    #MENU = ['menu','game','gameOver']
 
     def __init__(self) :
+        #self.MENU = ['menu','game','gameOver']
+        self.gameMap = PlayMap()
+        self.gameOver = 'defaultVALUE'
         #What stage of the interface the game is on
-        self.state = MENU[0]
+        self.state = 'menu'
         #Size of the window
         self.size = [550,500]
-        updateState()
+        self.startGameButton = pygame.Rect(150,200,100,150)
+        self.exitGameButton = pygame.Rect(300,200,100,150)
+        
+        self.updateState()
 
     #Add ValueError exception
     #change value of self.state
     def changeState(self,newState) :
         self.state = newState
-        if self.state==MENU[0]:
-            
-        if self.state==MENU[1]:
+        if self.state=='game':
+            print"PLAYMANP MADE"
             gameMap = PlayMap()
-        if self.state==MENU[2]:
-            gameOver = GameOver(gameMap.score
+        if self.state=='gameOver':
+            gameOver = GameOver(gameMap.score)
         
     #call necessary functions based on current state
     def updateState(self) :
-        if self.state==MENU[0] :
-
-        if self.state==MENU[1] :
+        if self.state=='menu' :
+            return [self.startGameButton,self.exitGameButton]
+        if self.state=='game' :
             gameMap.updateState()
             return gameMap.getCurrentState()
-        if self.state==MENU[2] :
+        if self.state=='gameOver' :
             gameOver.updateState(gameMap.score)
             return gameOver.getCurrentState()
+    
+    
+
+
             
         

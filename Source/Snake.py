@@ -4,9 +4,9 @@ class Snake:
 
     # x,y coordinate of the head of the snake
     def __init__(self,x,y):
-        self.life = true 
+        self.life = True 
         #DIRECTIONS: -1=down,1=up,-2=left,2=right
-        self.dir = 1
+        self.direction = -1
         # READ AS: points[i] shows [x,y] for ith object
         self.points = []
 
@@ -15,9 +15,9 @@ class Snake:
             self.points.insert(i,pygame.Rect(x,y+i*10,10,10))
 
     # updates direction if it is valid
-    def changeDir(self,dir):
+    def changeDir(self,direction):
         
-        if (self.dir!=dir and self.dir!=-dir): self.dir = dir
+        if (self.direction!=direction and self.direction!=-direction): self.direction = direction
 
     # increase size of the snake
     def grow(self):
