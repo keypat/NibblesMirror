@@ -20,7 +20,7 @@ from random import randrange
 from pygame.locals import KEYDOWN, K_UP, K_RIGHT, K_DOWN, K_LEFT, QUIT, K_r, K_q
 from itertools import count
 
-size = width, height = 480, 480
+size = width, height = 700, 600
 up, right, down, left = (0, -10), (10, 0), (0, 10), (-10, 0)
 
 pygame.init()
