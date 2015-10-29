@@ -43,7 +43,7 @@ if mainMenu.state=='menu':
         
 for counter in count():
     #if mainMenu.state=='game' : clock.tick(min(5 + (mainMenu.gameMap.score / 4), 30))
-    clock.tick(min(5, 30))
+    clock.tick(min(15, 30))
 
     event = pygame.event.poll()
 
@@ -59,7 +59,7 @@ for counter in count():
         if mainMenu.state=='menu' and mainMenu.exitGameButton.collidepoint(pos) :
                 pygame.event.post(pygame.event.Event(QUIT))
                     
-    elif event.type == KEYDOWN and mainMenu.state=='game':
+    elif event.type == KEYDOWN :
 
         if event.key == K_UP:
             mainMenu.gameMap.snake.changeDir(1)
@@ -76,27 +76,31 @@ for counter in count():
                 #         for value in range(20)]
                 #    foreground, background = (255, 255, 255), (0, 0, 0)
                     
-        elif event.key == K_q:
+        elif event.key == K_q and main:
             pygame.event.post(pygame.event.Event(QUIT))
 
             
     screen.fill(background)
     obj=mainMenu.updateState()
+   # if mainMenu.state=='gameOver':
+    #    mainMenu.update
     if mainMenu.state=='game':
         if obj==-1 :
                 print "gameOver state begins"
+                print "score,",mainMenu.gameMap.score
                 mainMenu.changeState('gameOver')
-        print "THIS IS BEFORE THE LOOP",obj[0]
-        print "THIS IS THE VALUE OF SNAKE.POINTS",mainMenu.gameMap.snake.points
-        print "len:",len(obj[0])
+        #print "THIS IS BEFORE THE LOOP",obj[0]
+        #print "THIS IS THE VALUE OF SNAKE.POINTS",mainMenu.gameMap.snake.points
+        #print "len:",len(obj[0])
         for i in range(2) :
             if i==0:
                 for j in range(len(obj[0])-1):
-                    print "INSIDE LOOP:",j," ::: ",obj[0][j]
+        #            print "INSIDE LOOP:",j," ::: ",obj[0][j]
                     pygame.draw.rect(screen,foreground,obj[0][j])
             else : pygame.draw.rect(screen,foreground,obj[1])
             #surface = font.render(str(len(snake)), True, foreground)
-            #screen.blit(surface, (460, 0))
+            #screen.blit(surface, (460, 0))   
+
         pygame.display.flip()
                 
             

@@ -21,10 +21,10 @@ class PlayMap:
                 # deal with food
                 
                 head = self.snake.points[0]
-                if head == self.food:
+                if head == self.food.position:
                         self.snake.grow()
                         self.food = Food()
-                self.score += 1
+                        self.score += 1
 
 
         def isSnakeDead(self):
