@@ -29,7 +29,7 @@ class MainMenu :
             self.gameMap = PlayMap()
             print"PLAYMAP MADE"
         if self.state=='gameOver':
-            self.gameOver = GameOver(gameMap.score)
+            self.gameOver = GameOver(self.gameMap.score)
         
     #call necessary functions based on current state
     def updateState(self) :
@@ -43,7 +43,7 @@ class MainMenu :
             return self.gameMap.getCurrentState()
             
         if self.state=='gameOver' :
-            self.gameOver.updateState(gameMap.score)
+            self.gameOver.updateState(self.gameMap.score)
             return self.gameOver.getCurrentState()
     
     
