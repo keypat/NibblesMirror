@@ -28,7 +28,7 @@ font = pygame.font.Font(None,25)
 
 mainMenu = MainMenu()
 print"menucrreated"
-foreground, background = (255, 255, 255), (0, 0, 0)
+foreground, background , MenuCol= (255, 255, 255), (0, 0, 0), (255,0,0)
 
 screen.fill(background)
 obj=mainMenu.updateState()
@@ -39,6 +39,50 @@ if mainMenu.state=='menu':
             surface = font.render('Play Game', True, background)
             screen.blit(surface, (150, 250))
         pygame.display.flip()
+
+def updateGUIDisplay() :
+        
+    screen.fill(background)
+    obj=mainMenu.updateState()
+   # if mainMenu.state=='gameOver':
+    #    mainMenu.update
+    if mainMenu.state=='game':
+        if obj==-1 :
+                print "gameOver state begins"
+                print "score,",mainMenu.gameMap.score
+                mainMenu.changeState('gameOver')
+
+        #print "THIS IS BEFORE THE LOOP",obj[0]
+        #print "THIS IS THE VALUE OF SNAKE.POINTS",mainMenu.gameMap.snake.points
+        #print "len:",len(obj[0])
+    if mainMenu.state=='game' :
+        for i in range(2) :
+            if i==0:
+                for j in range(len(obj[0])-1):
+        #            print "INSIDE LOOP:",j," ::: ",obj[0][j]
+                    pygame.draw.rect(screen,foreground,obj[0][j])
+            else : pygame.draw.rect(screen,foreground,obj[1])
+            #surface = font.render(str(len(snake)), True, foreground)
+            #screen.blit(surface, (460, 0))   
+
+        pygame.display.flip()
+
+    if mainMenu.state=='gameOver' :
+        obj = mainMenu.updateState()
+        surface = font.render('Game Over!       SCORE: '+str(obj[0]),True,MenuCol)
+        screen.blit(surface,(150,400))
+
+        pygame.draw.rect(screen,foreground,obj[1])
+        surface2 = font.render('Retry', True, background)
+        screen.blit(surface2,(100,200))
+
+        pygame.draw.rect(screen,foreground,obj[2])
+        surface3 = font.render('Exit', True, background)
+        screen.blit(surface3,(300,200)) 
+            
+        pygame.display.flip()
+
+
 
         
 for counter in count():
@@ -58,17 +102,22 @@ for counter in count():
                 mainMenu.changeState('game')
         if mainMenu.state=='menu' and mainMenu.exitGameButton.collidepoint(pos) :
                 pygame.event.post(pygame.event.Event(QUIT))
+        if mainMenu.state=='gameOver' and mainMenu.gameOver.retryButton.collidepoint(pos) :
+                mainMenu.changeState('game')
+        if mainMenu.state=='gameOver' and mainMenu.gameOver.exitButton.collidepoint(pos) :
+                pygame.event.post(pygame.event.Event(QUIT))
                     
     elif event.type == KEYDOWN :
 
-        if event.key == K_UP:
-            mainMenu.gameMap.snake.changeDir(1)
-        elif event.key == K_RIGHT:
-            mainMenu.gameMap.snake.changeDir(2)
-        elif event.key == K_DOWN:
-            mainMenu.gameMap.snake.changeDir(-1)
-        elif event.key == K_LEFT:
-            mainMenu.gameMap.snake.changeDir(-2)
+        if mainMenu.state=='game' :
+                if event.key == K_UP:
+                    mainMenu.gameMap.snake.changeDir(1)
+                elif event.key == K_RIGHT:
+                    mainMenu.gameMap.snake.changeDir(2)
+                elif event.key == K_DOWN:
+                    mainMenu.gameMap.snake.changeDir(-1)
+                elif event.key == K_LEFT:
+                    mainMenu.gameMap.snake.changeDir(-2)
                     
                 #elif event.key == K_r:
                 #    snake_dir, food, dead = down, None, False
@@ -76,31 +125,10 @@ for counter in count():
                 #         for value in range(20)]
                 #    foreground, background = (255, 255, 255), (0, 0, 0)
                     
-        elif event.key == K_q and main:
+        elif event.key == K_q:
             pygame.event.post(pygame.event.Event(QUIT))
 
-            
-    screen.fill(background)
-    obj=mainMenu.updateState()
-   # if mainMenu.state=='gameOver':
-    #    mainMenu.update
-    if mainMenu.state=='game':
-        if obj==-1 :
-                print "gameOver state begins"
-                print "score,",mainMenu.gameMap.score
-                mainMenu.changeState('gameOver')
-        #print "THIS IS BEFORE THE LOOP",obj[0]
-        #print "THIS IS THE VALUE OF SNAKE.POINTS",mainMenu.gameMap.snake.points
-        #print "len:",len(obj[0])
-        for i in range(2) :
-            if i==0:
-                for j in range(len(obj[0])-1):
-        #            print "INSIDE LOOP:",j," ::: ",obj[0][j]
-                    pygame.draw.rect(screen,foreground,obj[0][j])
-            else : pygame.draw.rect(screen,foreground,obj[1])
-            #surface = font.render(str(len(snake)), True, foreground)
-            #screen.blit(surface, (460, 0))   
 
-        pygame.display.flip()
-                
-            
+    updateGUIDisplay() ;
+
+
