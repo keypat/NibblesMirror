@@ -14,7 +14,7 @@ class MainMenu :
         #What stage of the interface the game is on
         self.state = 'menu'
         #Size of the window
-        self.size = [550,500]
+        #self.size = [550,500]
         self.startGameButton = pygame.Rect(150,200,100,150)
         self.exitGameButton = pygame.Rect(300,200,100,150)
         
@@ -33,13 +33,11 @@ class MainMenu :
         
     #call necessary functions based on current state
     def updateState(self) :
-        print "MainMenu.updateState ran"
+        #print "MainMenu.updateState ran"
         if self.state=='menu' :
             return [self.startGameButton,self.exitGameButton]
         if self.state=='game' :
             self.gameMap.updateState()
-            #for i in self.gameMap.getCurrentState()[0]:
-            #    print i
             return self.gameMap.getCurrentState()
             
         if self.state=='gameOver' :

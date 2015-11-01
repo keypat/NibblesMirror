@@ -42,3 +42,9 @@ class Snake:
         if self.direction==-2:
             self.points.insert(0,pygame.Rect(self.points[0].left-10,self.points[0].top,10,10))
     
+    # remove all points after passed index
+    def remove(self,index) :
+        i = len(self.points)
+        while len(self.points) != index+1 : self.points.pop()
+            
+                        
