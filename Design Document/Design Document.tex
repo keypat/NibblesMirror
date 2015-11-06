@@ -21,9 +21,10 @@
 
 \begin{document}
 
-\title{Module Guide for Solar Water Heating Systems
-  Incorporating Phase Change Material} 
-\author{Thulasi Jegatheesan}
+\title{Design Document for Snake Game} 
+\author{Keyur Patel
+Alex Guerrero
+Shafeeq Rabbani}
 \date{\today}
 	
 \maketitle
@@ -34,56 +35,21 @@
 
 \section{Introduction}
 
-Decomposing a system into modules is a commonly accepted approach to developing
-software.  A module is a work assignment for a programmer or programming
-team~\citep{ParnasEtAl1984}.  In the best practices for scientific computing,
-\citet{WilsonEtAl2013} advise a modular design, but are silent on the criteria
-to use to decompose the software into modules.  We advocate a decomposition
-based on the principle of information hiding~\citep{Parnas1972a}.  This
-principle supports design for change, because the ``secrets'' that each module
-hides represent likely future changes.  Design for change is valuable in SC,
-where modifications are frequent, especially during initial development as the
-solution space is explored.  
-
-Our design follows the rules layed out by \citet{ParnasEtAl1984}, as follows:
-\begin{itemize}
-\item System details that are likely to change independently should be the
-  secrets of separate modules.
-\item Each data structure is used in only one module.
-\item Any other program that requires information stored in a module's data
-  structures must obtain it by calling access programs belonging to that module.
-\end{itemize}
-
-After completing the first stage of the design, the Software Requirements
-Specification (SRS), the Module Guide (MG) is developed~\citep{ParnasEtAl1984}. The MG
-specifies the modular structure of the system and is intended to allow both
-designers and maintainers to easily identify the parts of the software.  The
-potential readers of this document are as follows:
+The following documentation is intended elaborate how the design of the snake game is implemented. The document will also explain how the functional and non-functional requirements mentioned in the Software Requirements Specification will be explained. This document is intended for the following readers:
 
 \begin{itemize}
-\item New project members: This document can be a guide for a new project member
-  to easily understand the overall structure and quickly find the
-  relevant modules they are searching for.
-\item Maintainers: The hierarchical structure of the module guide improves the
-  maintainers' understanding when they need to make changes to the system. It is
-  important for a maintainer to update the relevant sections of the document
-  after changes have been made.
-\item Designers: Once the module guide has been written, it is can be used to
-  check for consistency, feasibility and flexibility. Designers can verify the
-  system in various ways, such as consistency among modules, feasibility of the
-  decomposition, and flexibility of the design.
+\item Designers: The document can serve to ensure that all functional and non-functional requirements are met. Further, designers can also use this document to verify any discrepancies among different modules.
+
+\item New Project Members: This document can bring new team members up-to-date with the overview and structure of the game.
+
+\item Maintainers: This document can also used to understand the structure of the game and all of the modules within. It would then be the responsibility of the maintainers to update the Design document by mentioning any change they have made to it.
 \end{itemize}
 
-The rest of the document is organized as follows. Section
-\ref{SecChange} lists the anticipated and unlikely changes of the software
-requirements. Section \ref{SecMH} summarizes the module decomposition that
-was constructed according to the likely changes. Section \ref{SecConnection}
-specifies the connections between the software requirements and the
-modules. Section \ref{SecMD} gives a detailed description of the
-modules. Section \ref{SecTM} includes two traceability matrices. One checks
-the completeness of the design against the requirements provided in the SRS. The
-other shows the relation between anticipated changes and the modules. Section
-\ref{SecUse} describes the use relation between modules.
+The Snake game has been divided up into modules which hide information from other modules in the document in order to implement the Information Hiding principle of Software Engineering. Further, the modules only share the information amongst each other that is necessary. This is done to ensure the Low Coupling principle of Software Engineering. In order to read or modify values within different modules, there are getter and setter methods unique to the respective modules. This is done to implement the Encapsulation principle of Software Engineering.
+
+This document consists of the Module Interface Specification (or MIS) which is intended for programmers who work to further develop the Snake Game.
+
+The rest of this document consists of the GANTT and PERT chart meant to highlight the time frame for future deliverables for development of the Snake Game.
 
 \section{Anticipated and Unlikely Changes} \label{SecChange}
 
@@ -209,6 +175,28 @@ and \mref{mPlot} are already available in Matlab and will not be reimplemented.
 The design of the system is intended to satisfy the requirements developed in
 the SRS. In this stage, the system is decomposed into modules. The connection
 between requirements and modules is listed in Table \ref{TblRT}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{AC} & \textbf{Modules}\\
+\midrule
+AC1 & M1\\
+AC2 & M2\\
+AC3 & M3\\
+AC4 & M4\\
+AC5 & M5\\
+AC6 & M6\\
+AC7 & M7\\
+AC8 & M8\\
+AC9 & M9\\
+AC10 & M10\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Anticipated Changes and Modules}
+\label{TblRT}
+\end{table}
 
 \section{Module Decomposition} \label{SecMD}
 
@@ -375,27 +363,7 @@ R10 & M4, M5, M6, M7\\
 \label{TblRT}
 \end{table}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
-\toprule
-\textbf{AC} & \textbf{Modules}\\
-\midrule
-AC1 & M1\\
-AC2 & M2\\
-AC3 & M3\\
-AC4 & M4\\
-AC5 & M5\\
-AC6 & M6\\
-AC7 & M7\\
-AC8 & M8\\
-AC9 & M9\\
-AC10 & M10\\
-\bottomrule
-\end{tabular}
-\caption{Trace Between Anticipated Changes and Modules}
-\label{TblRT}
-\end{table}
+
 \section{Use Hierarchy Between Modules} \label{SecUse}
 
 In this section, the uses hierarchy between modules is
