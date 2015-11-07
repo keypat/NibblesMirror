@@ -77,15 +77,8 @@ These are design decisions that have to be changed after they were fixed in the 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
   (Input: Keyboard, Mouse Output: Screen).
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] The code will have to be reimplemented in another programming language.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] Output data are
-  displayed to the output device.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucGoal}:] The goal of the system
-  is to calculate temperatures and energies.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucODEstructure}:] The ODEs for
-  temperature can be defined using parameters defined in the input parameters module.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucEnergyStructure}:] The energy
-  equations can be defined using the parameters defined in the input parameters module.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] The game will always be implemented in python using the Pygame library.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] The goal of the game is to get the highest score possible.
 \end{description}
 
 \section{Module Hierarchy} \label{SecMH}
@@ -115,17 +108,17 @@ The Hardware-Hiding Module is already implemented by the operating system and he
 {Hardware-Hiding Module} & ~ \\
 \midrule
 
-\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} & Input Format Module\\
-& Input Parameters Module\\
-& Output Format Module\\
-& Temperature ODEs Module\\
-& Energy Equations Module\\ 
-& Control Module\\
+\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} 
+& Food Module\\
+& GameOver Module\\
+& MainMenu Module\\
+& PlayMap ODEs Module\\
+& PowerUp Module\\ 
+& Snake Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {Sequence Data Structure Module}\\
-& ODE Solver Module\\
-& Plotting Module\\
+\multirow{3}{0.3\textwidth}{Software Decision Module} 
+& Controller Module\\
 \bottomrule
 
 \end{tabular}
