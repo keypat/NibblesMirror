@@ -53,14 +53,11 @@ The rest of this document consists of the GANTT and PERT chart meant to highligh
 
 \section{Anticipated and Unlikely Changes} \label{SecChange}
 
-This section lists possible changes to the system. According to the likeliness
-of the change, the possible changes are classified into two
-categories. Anticipated changes are listed in Section \ref{SecAchange}, and
-unlikely changes are listed in Section \ref{SecUchange}.
+There are two types of possible changes: Anticipated and Unlikely Changes. This section covers both of these changes.
 
 \subsection{Anticipated Changes} \label{SecAchange}
 
-There are two types of possible changes: Anticipated and Unlikely Changes. This section covers both of these changes.
+
 
 \begin{description}
 \item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
@@ -87,21 +84,11 @@ There are two types of possible changes: Anticipated and Unlikely Changes. This 
 
 \subsection{Unlikely Changes} \label{SecUchange}
 
-The module design should be as general as possible. However, a general system is
-more complex. Sometimes this complexity is not necessary. Fixing some design
-decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
-will potentially need to be modified. Hence, it is not intended that these
-decisions will be changed.  As an example, the ODEs for the temperature and the
-energy equations are assumed to follow the structure given in the SRS; that is,
-even if they need to be modified, the modifications should be possible by
-changing how the input parameters are used in the definition.  If new parameters
-are needed, this will mean a change to both the input parameters module, the
-calculation module and the output module.
+These are design decisions that have to be changed after they were fixed in the software architecture state (in order to simplify the design). It wasn't intended that these decisions would have to be changed.
 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
+  (Input: Keyboard, Mouse Output: Screen).
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
   a source of input data external to the software.
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] Output data are
