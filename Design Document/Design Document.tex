@@ -63,14 +63,13 @@ There are two types of possible changes: Anticipated and Unlikely Changes. This 
 
 
 \begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific computer on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] Addition or modification of Keyboard and mouse commands as game is expanded in the future.
 \item[\refstepcounter{acnum} \actheacnum \label{acFood}:] The type of food which the snake eats.
 \item[\refstepcounter{acnum} \actheacnum \label{acGameOver}:] What must happen after the game is over.
 \item[\refstepcounter{acnum} \actheacnum \label{acMainMenu}:] More options available in the menu as game expands .e.g. save game, high scores, sound, difficulty etc.
 \item[\refstepcounter{acnum} \actheacnum \label{acPlayMap}:] The map of the game.
 \item[\refstepcounter{acnum} \actheacnum \label{acPowerUps}:] Different PowerUps will be available such as Intangibility (.i.e. ability to go through walls) as the game expands.
 \item[\refstepcounter{acnum} \actheacnum \label{acSnake}:] The characteristics of the snake .e.g. its color, the way it grows, the speed at which it moves etc.
+\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] Addition or modification of Keyboard and mouse commands as game is expanded in the future.
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -89,14 +88,13 @@ These are design decisions that have to be changed after they were fixed in the 
 This section lists the modules in the Snake game. The modules listed below are leaves in the module hierarchy in the table below. 
 
 \begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHardware}:] Hardware Hiding Module\
-\item [\refstepcounter{mnum} \mthemnum \label{mController}:] Controller Module
 \item [\refstepcounter{mnum} \mthemnum \label{mFood}:] Food Module
 \item [\refstepcounter{mnum} \mthemnum \label{mGameOver}:] GameOver Module
 \item [\refstepcounter{mnum} \mthemnum \label{mMainMenu}:] MainMenu Module
 \item [\refstepcounter{mnum} \mthemnum \label{mPlayMap}:] PlayMap Module
 \item [\refstepcounter{mnum} \mthemnum \label{mPowerUp}:] PowerUp Module
 \item [\refstepcounter{mnum} \mthemnum \label{mSnake}:] Snake Module
+\item [\refstepcounter{mnum} \mthemnum \label{mController}:] Controller Module
 \end{description}
 
 The Hardware-Hiding Module is already implemented by the operating system and hence will not be reimplemented.
@@ -146,7 +144,6 @@ AC4 & M4\\
 AC5 & M5\\
 AC6 & M6\\
 AC7 & M7\\
-AC8 & M8\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
@@ -188,53 +185,48 @@ selected.
 \subsubsection{Food Module (M1)}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
+\item[Secrets:] The generation of food location.
+\item[Services:] Places food in a random location on the play map.
 \item[Implemented By:] SWHS
 \end{description}
 
 \subsubsection{GameOver Module (M2)}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input parameters.
-\item[Services:]Stores the parameters needed for the program, including material
-  properties, processing conditions and numerical parameters.  The values can be
-  read as needed.  This module knows how many parameters it stores.
+\item[Secrets:]
+\item[Services:]
 \item[Implemented By:] SWHS
 \end{description}
 
 \subsubsection{MainMenu Module (M3)}
 
 \begin{description}
-\item[Secrets:] The format and structure of the output data.
-\item[Services:] Outputs the results of the calculations, including the input
-  parameters, temperatures, energies, and times when melting starts and stops.
+\item[Secrets:] 
+\item[Services:] 
 \item[Implemented By:] SWHS
 \end{description} 
 
 \subsubsection{PlayMap Module (M4)}
 
 \begin{description}
-\item[Secrets:] The ODEs for solving the temperature, using the input parameters.
-\item[Services:] Defines the ODEs using the parameters in the input parameters module.
+\item[Secrets:] 
+\item[Services:] 
 \item[Implemented By:] SWHS
 \end{description} 
 
 \subsubsection{PowerUp Module (M5)}
 
 \begin{description}
-\item[Secrets:] The equations for solving for the energies using the input parameters.
-\item[Services:] Defines the energy equations using the parameters in the input
-  parameters module.
+\item[Secrets:] 
+\item[Services:] 
 \item[Implemented By:] SWHS
 \end{description} 
  
 \subsubsection{Snake Module (M6)}
 
 \begin{description}
-\item[Secrets:] The algorithm for coordinating the running of the program.
-\item[Services:] Provides the main program.
+\item[Secrets:] 
+\item[Services:] 
 \item[Implemented By:] SWHS
 \end{description}
 
@@ -247,43 +239,6 @@ selected.
 \end{description}
 
 \subsection{Software Decision Module}
-
-\begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
-\end{description}
-
-\subsubsection{Sequence Data Structure Module (\mref{mSeqDS})}
-
-\begin{description}
-\item[Secrets:] The data structure for a sequence data type.
-\item[Services:] Provides array manipulation, including building an array,
-  accessing a specific entry, slicing an array etc.
-\item[Implemented By:] Matlab
-\end{description}
-
-\subsubsection{ODE Solver Module (\mref{mSolver})}
-
-\begin{description}
-\item[Secrets:] The algorithm to solve a system of first order ODEs.
-\item[Services:] Provides solvers that take the governing equation, initial
-  conditions and numerical parameters and solve them.
-\item[Implemented By:] Matlab
-\end{description}
-
-\subsubsection{Plotting Module (\mref{mPlot})}
-
-\begin{description}
-\item[Secrets:] The data structures and algorithms for plotting data graphically.
-\item[Services:] Provides a plot function.
-\item[Implemented By:] Matlab
-\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 
