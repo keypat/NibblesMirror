@@ -111,17 +111,17 @@ The Hardware-Hiding Module is already implemented by the operating system and he
 {Hardware-Hiding Module} & ~ \\
 \midrule
 
-\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} 
+\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} 
 & Food Module\\
 & GameOver Module\\
 & MainMenu Module\\
 & PlayMap Module\\
 & PowerUp Module\\ 
 & Snake Module\\
+& Controller Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} 
-& Controller Module\\
+{Software Decision Module} & ~ \\
 \bottomrule
 
 \end{tabular}
@@ -171,6 +171,7 @@ that the module is not a leaf and will not have to be implemented. Whether or
 not this module is implemented depends on the programming language
 selected.
 
+<<<<<<< HEAD
 \subsection{Hardware Hiding Modules (\mref{mHH})}
 
 \begin{description}
@@ -180,6 +181,9 @@ selected.
   system. This module provides the interface between the hardware and the
   software. So, the system can use it to display outputs or to accept inputs.
 \end{description}
+=======
+\subsection{Hardware Hiding Modules}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \subsection{Behaviour-Hiding Module}
 
@@ -192,40 +196,79 @@ selected.
   module will need to change if there are changes in the SRS.
 \end{description}
 
+<<<<<<< HEAD
 \subsubsection{Food (M2)}
+=======
+\subsubsection{Food Module (M1)}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
 \item[Secrets:]The structure of the Food
 \item[Services:]generates and stores a Food object in a random position
 \end{description}
 
+<<<<<<< HEAD
 \subsubsection{PowerUp (M7)}
+=======
+\subsubsection{GameOver Module (M2)}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
 \item[Secrets:]The format and structure of the Power up
 \item[Services:]generates and stores a powerup object in a random position
 \end{description}
 
+<<<<<<< HEAD
 \subsubsection{PlayMap (M6)}
+=======
+\subsubsection{MainMenu Module (M3)}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
 \item[Secrets:] The format of the game board
 \item[Services:] updates state of the game board and returns objects to be displayed
 \end{description} 
 
+<<<<<<< HEAD
 \subsubsection{MainMenu (M5)}
+=======
+\subsubsection{PlayMap Module (M4)}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
 \item[Secrets:] The format and and state update redirection of the backend
 \item[Services:] emulates the game window and different states and menus
 \end{description} 
 
+<<<<<<< HEAD
 \subsubsection{Snake (M8)}
+=======
+\subsubsection{PowerUp Module (M5)}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
 \item[Secrets:] The behaviour of the Snake object
 \item[Services:] defines the points of the snake and has functions to manipulate snake
 \end{description} 
+<<<<<<< HEAD
+=======
+ 
+\subsubsection{Snake Module (M6)}
+
+\begin{description}
+\item[Secrets:] The algorithm for coordinating the running of the program.
+\item[Services:] Provides the main program.
+\item[Implemented By:] SWHS
+\end{description}
+
+\subsubsection{Controller Module (M7)}
+
+\begin{description}
+\item[Secrets:] The algorithm for coordinating the running of the program.
+\item[Services:] Provides the main program.
+\item[Implemented By:] SWHS
+\end{description}
+>>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \subsection{Software Decision Module}
 
