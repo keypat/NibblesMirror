@@ -179,7 +179,6 @@ selected.
 \item[Services:]Serves as a virtual hardware used by the rest of the
   system. This module provides the interface between the hardware and the
   software. So, the system can use it to display outputs or to accept inputs.
-\item[Implemented By:] OS
 \end{description}
 
 \subsection{Behaviour-Hiding Module}
@@ -191,61 +190,42 @@ selected.
   documents. This module serves as a communication layer between the
   hardware-hiding module and the software decision module. The programs in this
   module will need to change if there are changes in the SRS.
-\item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Food (M2)}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] SWHS
+\item[Secrets:]The structure of the Food
+\item[Services:]generates and stores a Food object in a random position
 \end{description}
 
-\subsubsection{Input Parameters Module (\mref{mParams})}
+\subsubsection{PowerUp (M7)}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input parameters.
-\item[Services:]Stores the parameters needed for the program, including material
-  properties, processing conditions and numerical parameters.  The values can be
-  read as needed.  This module knows how many parameters it stores.
-\item[Implemented By:] SWHS
+\item[Secrets:]The format and structure of the Power up
+\item[Services:]generates and stores a powerup object in a random position
 \end{description}
 
-\subsubsection{Output Format Module (\mref{mOutput})}
+\subsubsection{PlayMap (M6)}
 
 \begin{description}
-\item[Secrets:] The format and structure of the output data.
-\item[Services:] Outputs the results of the calculations, including the input
-  parameters, temperatures, energies, and times when melting starts and stops.
-\item[Implemented By:] SWHS
+\item[Secrets:] The format of the game board
+\item[Services:] updates state of the game board and returns objects to be displayed
 \end{description} 
 
-\subsubsection{Temperature ODEs Module (\mref{mODEs})}
+\subsubsection{MainMenu (M5)}
 
 \begin{description}
-\item[Secrets:] The ODEs for solving the temperature, using the input parameters.
-\item[Services:] Defines the ODEs using the parameters in the input parameters module.
-\item[Implemented By:] SWHS
+\item[Secrets:] The format and and state update redirection of the backend
+\item[Services:] emulates the game window and different states and menus
 \end{description} 
 
-\subsubsection{Energy Equations Module (\mref{mEnergy})}
+\subsubsection{Snake (M8)}
 
 \begin{description}
-\item[Secrets:] The equations for solving for the energies using the input parameters.
-\item[Services:] Defines the energy equations using the parameters in the input
-  parameters module.
-\item[Implemented By:] SWHS
+\item[Secrets:] The behaviour of the Snake object
+\item[Services:] defines the points of the snake and has functions to manipulate snake
 \end{description} 
- 
-\subsubsection{Control Module (\mref{mControl})}
-
-\begin{description}
-\item[Secrets:] The algorithm for coordinating the running of the program.
-\item[Services:] Provides the main program.
-\item[Implemented By:] SWHS
-\end{description}
 
 \subsection{Software Decision Module}
 
@@ -255,35 +235,7 @@ selected.
   \emph{not} described in the SRS.
 \item[Services:] Includes data structure and algorithms used in the system that
   do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
-\end{description}
 
-\subsubsection{Sequence Data Structure Module (\mref{mSeqDS})}
-
-\begin{description}
-\item[Secrets:] The data structure for a sequence data type.
-\item[Services:] Provides array manipulation, including building an array,
-  accessing a specific entry, slicing an array etc.
-\item[Implemented By:] Matlab
-\end{description}
-
-\subsubsection{ODE Solver Module (\mref{mSolver})}
-
-\begin{description}
-\item[Secrets:] The algorithm to solve a system of first order ODEs.
-\item[Services:] Provides solvers that take the governing equation, initial
-  conditions and numerical parameters and solve them.
-\item[Implemented By:] Matlab
-\end{description}
-
-\subsubsection{Plotting Module (\mref{mPlot})}
-
-\begin{description}
-\item[Secrets:] The data structures and algorithms for plotting data graphically.
-\item[Services:] Provides a plot function.
-\item[Implemented By:] Matlab
 \end{description}
 
 \section{Traceability Matrix} \label{SecTM}
