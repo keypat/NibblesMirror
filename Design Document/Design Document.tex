@@ -65,12 +65,12 @@ There are two types of possible changes: Anticipated and Unlikely Changes. This 
 \begin{description}
 \item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific computer on which the software is running.
 \item[\refstepcounter{acnum} \actheacnum \label{acInput}:] Addition or modification of Keyboard and mouse commands as game is expanded in the future.
-\item[\refstepcounter{acnum} \actheacnum \label{acParams}:] The type of food which the snake eats.
-\item[\refstepcounter{acnum} \actheacnum \label{acOutput}:] What must happen after the game is over.
-\item[\refstepcounter{acnum} \actheacnum \label{acODEs}:] More options available in the menu as game expands .e.g. save game, high scores, sound, difficulty etc.
-\item[\refstepcounter{acnum} \actheacnum \label{acEnergy}:] The map of the game.
-\item[\refstepcounter{acnum} \actheacnum \label{acControl}:] Different PowerUps will be available such as Intangibility (.i.e. ability to go through walls) as the game expands.
-\item[\refstepcounter{acnum} \actheacnum \label{acSeqDS}:] The characteristics of the snake .e.g. its color, the way it grows, the speed at which it moves etc.
+\item[\refstepcounter{acnum} \actheacnum \label{acFood}:] The type of food which the snake eats.
+\item[\refstepcounter{acnum} \actheacnum \label{acGameOver}:] What must happen after the game is over.
+\item[\refstepcounter{acnum} \actheacnum \label{acMainMenu}:] More options available in the menu as game expands .e.g. save game, high scores, sound, difficulty etc.
+\item[\refstepcounter{acnum} \actheacnum \label{acPlayMap}:] The map of the game.
+\item[\refstepcounter{acnum} \actheacnum \label{acPowerUps}:] Different PowerUps will be available such as Intangibility (.i.e. ability to go through walls) as the game expands.
+\item[\refstepcounter{acnum} \actheacnum \label{acSnake}:] The characteristics of the snake .e.g. its color, the way it grows, the speed at which it moves etc.
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -80,8 +80,8 @@ These are design decisions that have to be changed after they were fixed in the 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
   (Input: Keyboard, Mouse Output: Screen).
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] The game will always be implemented in python using the Pygame library.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] The goal of the game is to get the highest score possible.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucPygame}:] The game will always be implemented in python using the Pygame library.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucGoal}:] The goal of the game is to get the highest score possible.
 \end{description}
 
 \section{Module Hierarchy} \label{SecMH}
@@ -89,14 +89,14 @@ These are design decisions that have to be changed after they were fixed in the 
 This section lists the modules in the Snake game. The modules listed below are leaves in the module hierarchy in the table below. 
 
 \begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware Hiding Module\
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Controller Module
-\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] Food Module
-\item [\refstepcounter{mnum} \mthemnum \label{mParams}:] GameOver Module
-\item [\refstepcounter{mnum} \mthemnum \label{mOutput}:] MainMenu Module
-\item [\refstepcounter{mnum} \mthemnum \label{mODEs}:] PlayMap Module
-\item [\refstepcounter{mnum} \mthemnum \label{mEnergy}:] PowerUp Module
-\item [\refstepcounter{mnum} \mthemnum \label{mSeqDS}:] Snake Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHardware}:] Hardware Hiding Module\
+\item [\refstepcounter{mnum} \mthemnum \label{mController}:] Controller Module
+\item [\refstepcounter{mnum} \mthemnum \label{mFood}:] Food Module
+\item [\refstepcounter{mnum} \mthemnum \label{mGameOver}:] GameOver Module
+\item [\refstepcounter{mnum} \mthemnum \label{mMainMenu}:] MainMenu Module
+\item [\refstepcounter{mnum} \mthemnum \label{mPlayMap}:] PlayMap Module
+\item [\refstepcounter{mnum} \mthemnum \label{mPowerUp}:] PowerUp Module
+\item [\refstepcounter{mnum} \mthemnum \label{mSnake}:] Snake Module
 \end{description}
 
 The Hardware-Hiding Module is already implemented by the operating system and hence will not be reimplemented.
