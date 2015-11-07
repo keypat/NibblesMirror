@@ -1,12 +1,10 @@
-##import pygame
-##from pygame.locals import KEYDOWN, K_UP, K_RIGHT, K_DOWN, K_LEFT, QUIT, K_r, K_q
-##
-##event = pygame.event.poll()
-##
 
-##
-##    if dead:
-##        continue
+"""
+The Controller Module
+-The controller.py Module contains the GUI of the game and manages user input
+ and output
+
+"""
 
         
 import sys, pygame
@@ -17,18 +15,20 @@ from Food import *
 from pygame.locals import KEYDOWN, K_SPACE, K_UP, K_RIGHT, K_DOWN, K_LEFT, QUIT, K_a, K_w, K_s, K_d, K_r, K_q
 from itertools import count
 
+
+"""
+initialize state variables : size, clock, screen, fonts, mainMenu
+"""
+
 size=x,y=550,500
 
 pygame.init()
-print"wassup"
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode(size)
-print "brooo"
 font = pygame.font.Font(None,25)
 font2 = pygame.font.Font(None,20)
 
 mainMenu = MainMenu()
-print"menucrreated"
 foreground, background , menuCol= (255, 255, 255), (0, 0, 0), (255,0,0)
 
 screen.fill(background)
@@ -43,26 +43,29 @@ if mainMenu.state=='menu':
         screen.blit(surface2, (300, 200))
         pygame.display.flip()
 
+
 def updateGUIDisplay() :
+    """
+Function Description: This function is called by the main code to update the GUI on the display.
+input:none
+output:none
+exceptions:none
+"""
         
     screen.fill(background)
     obj=mainMenu.updateState()
-   # if mainMenu.state=='gameOver':
-    #    mainMenu.update
+
     if mainMenu.state=='game':
         if obj==-1 :
                 print "gameOver state begins"
                 print "score,",mainMenu.gameMap.score
                 mainMenu.changeState('gameOver')
 
-        #print "THIS IS BEFORE THE LOOP",obj[0]
-        #print "THIS IS THE VALUE OF SNAKE.POINTS",mainMenu.gameMap.snake.points
-        #print "len:",len(obj[0])
+
     if mainMenu.state=='game' :
         for i in range(3) :
             if i==0:
                 for j in range(len(obj[0])-1):
-        #            print "INSIDE LOOP:",j," ::: ",obj[0][j]
                     if mainMenu.gameMap.powerUpStatus and j==0 : pygame.draw.rect(screen,menuCol,obj[0][j])
                     else : pygame.draw.rect(screen,foreground,obj[0][j])
             if i==1 : pygame.draw.rect(screen,foreground,obj[1])
@@ -93,8 +96,8 @@ def updateGUIDisplay() :
 
         
 for counter in count():
-    if mainMenu.state!='game' : clock.tick(min(15, 30))
-    else: clock.tick(min(5 + (mainMenu.gameMap.score / 4), 30))
+    if mainMenu.state!='game' : clock.tick(30)
+    else: clock.tick(min(15 + (mainMenu.gameMap.score / 4), 30))
 
 
     event = pygame.event.poll()

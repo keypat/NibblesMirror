@@ -3,9 +3,34 @@ import pygame
 from Food import *
 from PowerUp import *
 
+"""
+PlayMap object to represent the 'game board' for logic
+"""
+
 class PlayMap:
+        """
+        PlayMap has state variables:
+                height:integer
+                width: integer
+                snake: Snake object
+                food: Food object
+                powerUp: powerUp object
+                powerUpStatus: boolean
+                gameStatsBar: pygame.Rect object
+                powerUpIndicator: pygame.Rect object
+                score: integer
+        assumptions: __init__ is executed first
+        """
+                
 
         def __init__(self):
+                """
+                Constructor method for PlayMap
+                Transition: initialized into new game state
+                input:none
+                output:none
+                """
+                
                 print "PlayMap constructor ran"
                 self.height = 500
                 self.width = 550
@@ -21,6 +46,15 @@ class PlayMap:
 
 
         def updateState(self):
+                """
+                function to update the current state of the game board
+                aka what is the state one time unit in the future
+
+                Transition: moves snake, grows, or dies based on situation
+                input:none
+                output:none
+                """
+                
                 print "PlayMap.updateState ran"
                 self.snake.move()
                 # deal with food
@@ -33,11 +67,25 @@ class PlayMap:
 
 
         def isSnakeDead(self):
+                """
+                function to check if snake is dead
+
+                Transition: checks whether snake violates any rules of life
+                input:none
+                output:Boolean value
+                """
                 print "PlayMap.isSnakeDead ran"
                 status = self.didSnakeHitBorder() or self.didSnakeHitSelf()
                 return status
 
         def getCurrentState(self):
+                """
+                function to return the current state of the game board to MainMenu.py
+
+                Transition: returns current state of the board
+                input:none
+                output:an array of objects
+                """
                 print "PlayMap.getCurrentState ran"
                 if self.isSnakeDead():
                         return -1
@@ -48,6 +96,13 @@ class PlayMap:
 
 
         def didSnakeHitBorder(self):
+                """
+                function to check whether snake hit edge of the window
+
+                Transition: checks against position of the borders to determine if snake is hitting the border
+                input:none
+                output:Boolean value
+                """
                 print "PlayMap.didSnakeHitBorder ran"
                 head = self.snake.points[0]
                 if head.left < 0: return True
@@ -58,6 +113,13 @@ class PlayMap:
 
 
         def didSnakeHitSelf(self):
+                """
+                function to check whether snake hit itself
+
+                Transition: checks against position of itself to determine if snake is hitting itself
+                input:none
+                output:Boolean value
+                """
                 print "PlayMap.didSnakeHitSelf ran"
                 print self.snake.points
                 temp = len(self.snake.points)

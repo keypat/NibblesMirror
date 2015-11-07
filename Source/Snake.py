@@ -1,9 +1,27 @@
 import pygame
-
+"""
+Snake class is used by PlayMap to model the snake game environment
+"""
 class Snake:
+    """
+    Snake class encapsulates the characteristics of the snake
 
+    State variables:
+        life: boolean
+        direction: integer
+        points[]: list of pygame.Rect objects
+
+    assumption: __init__ is executed first
+    """
+    
     # x,y coordinate of the head of the snake
     def __init__(self,x,y):
+        """
+            Constructor method for Snake
+            Transition: initialized into new snake of length 20
+            input:x,y coordinates of the head of the snake
+            output:none
+        """
         self.life = True 
         #DIRECTIONS: -1=down,1=up,-2=left,2=right
         self.direction = -1
@@ -17,17 +35,41 @@ class Snake:
 
     # updates direction if it is valid
     def changeDir(self,direction):
+        """
+            function to change the current direction the snake is headed
+            
+            Transition: changes value of the direction based on passed value
+            input:integer value corresponding to new direction
+            output:none
+
+            exception: when the new direction is the same or opposite direction of current direction,
+                        dont update
+        """
         print "Snake.changeDir ran"
         if (self.direction!=direction and self.direction!=-direction): self.direction = direction
 
     # increase size of the snake
     def grow(self):
+        """
+            function to increase the size of the snake
+            
+            Transition: adds a point to the snake
+            input:none
+            output:none
+        """
         print "Snake.grow ran"
         #appends a duplicate of the last point of snake to the points list
         self.points.insert(len(self.points)+1,self.points[-1])
 
     # Moves snake in current direction
     def move(self) :
+        """
+            function to move the snake forward
+            
+            Transition: moves the points of the snake forward by one
+            input:none
+            output:none
+        """
         print "Snake.move ran"
         #remove tail of the snake
         self.points.pop(-1)
@@ -44,6 +86,13 @@ class Snake:
     
     # remove all points after passed index
     def remove(self,index) :
+        """
+            function to remove all points on the snake after index passed
+            
+            Transition: removes points on the snake after passed index
+            input:integer value corresponding to an index value
+            output:none
+        """
         i = len(self.points)
         while len(self.points) != index+1 : self.points.pop()
             
