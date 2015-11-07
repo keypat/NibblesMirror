@@ -111,17 +111,17 @@ The Hardware-Hiding Module is already implemented by the operating system and he
 {Hardware-Hiding Module} & ~ \\
 \midrule
 
-\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} 
+\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} 
 & Food Module\\
 & GameOver Module\\
 & MainMenu Module\\
 & PlayMap Module\\
 & PowerUp Module\\ 
 & Snake Module\\
+& Controller Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} 
-& Controller Module\\
+{Software Decision Module} & ~ \\
 \bottomrule
 
 \end{tabular}
@@ -171,16 +171,7 @@ that the module is not a leaf and will not have to be implemented. Whether or
 not this module is implemented depends on the programming language
 selected.
 
-\subsection{Hardware Hiding Modules (\mref{mHH})}
-
-\begin{description}
-\item[Secrets:]The data structure and algorithm used to implement the virtual
-  hardware.
-\item[Services:]Serves as a virtual hardware used by the rest of the
-  system. This module provides the interface between the hardware and the
-  software. So, the system can use it to display outputs or to accept inputs.
-\item[Implemented By:] OS
-\end{description}
+\subsection{Hardware Hiding Modules}
 
 \subsection{Behaviour-Hiding Module}
 
@@ -194,7 +185,7 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Food Module (M1)}
 
 \begin{description}
 \item[Secrets:]The format and structure of the input data
@@ -203,7 +194,7 @@ selected.
 \item[Implemented By:] SWHS
 \end{description}
 
-\subsubsection{Input Parameters Module (\mref{mParams})}
+\subsubsection{GameOver Module (M2)}
 
 \begin{description}
 \item[Secrets:]The format and structure of the input parameters.
@@ -213,7 +204,7 @@ selected.
 \item[Implemented By:] SWHS
 \end{description}
 
-\subsubsection{Output Format Module (\mref{mOutput})}
+\subsubsection{MainMenu Module (M3)}
 
 \begin{description}
 \item[Secrets:] The format and structure of the output data.
@@ -222,7 +213,7 @@ selected.
 \item[Implemented By:] SWHS
 \end{description} 
 
-\subsubsection{Temperature ODEs Module (\mref{mODEs})}
+\subsubsection{PlayMap Module (M4)}
 
 \begin{description}
 \item[Secrets:] The ODEs for solving the temperature, using the input parameters.
@@ -230,7 +221,7 @@ selected.
 \item[Implemented By:] SWHS
 \end{description} 
 
-\subsubsection{Energy Equations Module (\mref{mEnergy})}
+\subsubsection{PowerUp Module (M5)}
 
 \begin{description}
 \item[Secrets:] The equations for solving for the energies using the input parameters.
@@ -239,7 +230,15 @@ selected.
 \item[Implemented By:] SWHS
 \end{description} 
  
-\subsubsection{Control Module (\mref{mControl})}
+\subsubsection{Snake Module (M6)}
+
+\begin{description}
+\item[Secrets:] The algorithm for coordinating the running of the program.
+\item[Services:] Provides the main program.
+\item[Implemented By:] SWHS
+\end{description}
+
+\subsubsection{Controller Module (M7)}
 
 \begin{description}
 \item[Secrets:] The algorithm for coordinating the running of the program.
