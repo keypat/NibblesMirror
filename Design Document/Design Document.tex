@@ -151,134 +151,71 @@ AC7 & M7\\
 
 \section{Module Decomposition} \label{SecMD}
 
-Modules are decomposed according to the principle of ``information hiding''
-proposed by \citet{ParnasEtAl1984}. The \emph{Secrets} field in a module
-decomposition is a brief statement of the design decision hidden by the
-module. The \emph{Services} field specifies \emph{what} the module will do
-without documenting \emph{how} to do it. For each module, a suggestion for the
-implementing software is given under the \emph{Implemented By} title. If the
-entry is \emph{OS}, this means that the module is provided by the operating
-system or by standard programming language libraries. If the entry is
-\emph{Matlab}, this means that the module is provided by Matlab.  \emph{SWHS} means the
-module will be implemented by the SWHS software.  
-% should reference a command for the name, in case it changes
-Only the leaf modules in the
-hierarchy have to be implemented. If a dash (\emph{--}) is shown, this means
-that the module is not a leaf and will not have to be implemented. Whether or
-not this module is implemented depends on the programming language
-selected.
-
-<<<<<<< HEAD
-\subsection{Hardware Hiding Modules (\mref{mHH})}
-
-\begin{description}
-\item[Secrets:]The data structure and algorithm used to implement the virtual
-  hardware.
-\item[Services:]Serves as a virtual hardware used by the rest of the
-  system. This module provides the interface between the hardware and the
-  software. So, the system can use it to display outputs or to accept inputs.
-\end{description}
-=======
-\subsection{Hardware Hiding Modules}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \subsection{Behaviour-Hiding Module}
 
 \begin{description}
-\item[Secrets:]The contents of the required behaviors.
-\item[Services:]Includes programs that provide externally visible behavior of
+\item[Secrets:]The contents of the required behaviours.
+\item[Services:]Includes programs that provide externally visible behaviour of
   the system as specified in the software requirements specification (SRS)
   documents. This module serves as a communication layer between the
   hardware-hiding module and the software decision module. The programs in this
   module will need to change if there are changes in the SRS.
 \end{description}
 
-<<<<<<< HEAD
-\subsubsection{Food (M2)}
-=======
-\subsubsection{Food Module (M1)}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
+\subsubsection{Food (M1)}
+
 
 \begin{description}
-<<<<<<< HEAD
+
 \item[Secrets:] The generation of food location.
 \item[Services:] Places food in a random location on the play map.
 \item[Implemented By:] SWHS
-=======
 \item[Secrets:]The structure of the Food
 \item[Services:]generates and stores a Food object in a random position
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+
 \end{description}
 
-<<<<<<< HEAD
-\subsubsection{PowerUp (M7)}
-=======
 \subsubsection{GameOver Module (M2)}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
+
 
 \begin{description}
-<<<<<<< HEAD
-\item[Secrets:]
-\item[Services:]
-\item[Implemented By:] SWHS
-=======
+
 \item[Secrets:]The format and structure of the Power up
 \item[Services:]generates and stores a powerup object in a random position
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+\item[Implemented By:] SWHS
 \end{description}
 
-<<<<<<< HEAD
-\subsubsection{PlayMap (M6)}
-=======
 \subsubsection{MainMenu Module (M3)}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
 
 \begin{description}
-<<<<<<< HEAD
-\item[Secrets:] 
-\item[Services:] 
-\item[Implemented By:] SWHS
-=======
+
+
+
 \item[Secrets:] The format of the game board
 \item[Services:] updates state of the game board and returns objects to be displayed
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+\item[Implemented By:] SWHS
 \end{description} 
 
-<<<<<<< HEAD
-\subsubsection{MainMenu (M5)}
-=======
 \subsubsection{PlayMap Module (M4)}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
+
 
 \begin{description}
-<<<<<<< HEAD
-\item[Secrets:] 
-\item[Services:] 
-\item[Implemented By:] SWHS
-=======
 \item[Secrets:] The format and and state update redirection of the backend
 \item[Services:] emulates the game window and different states and menus
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+\item[Implemented By:] SWHS
 \end{description} 
 
-<<<<<<< HEAD
-\subsubsection{Snake (M8)}
-=======
 \subsubsection{PowerUp Module (M5)}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
+
 
 \begin{description}
-<<<<<<< HEAD
-\item[Secrets:] 
-\item[Services:] 
-\item[Implemented By:] SWHS
-=======
+
 \item[Secrets:] The behaviour of the Snake object
 \item[Services:] defines the points of the snake and has functions to manipulate snake
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+\item[Implemented By:] SWHS
+
 \end{description} 
-<<<<<<< HEAD
-=======
  
 \subsubsection{Snake Module (M6)}
 
@@ -295,12 +232,11 @@ selected.
 \item[Services:] Provides the main program.
 \item[Implemented By:] SWHS
 \end{description}
->>>>>>> 09bff2e986302a97c3ebb4dcf875ec3337844073
+
 
 \subsection{Software Decision Module}
 
-<<<<<<< HEAD
-=======
+
 \begin{description}
 \item[Secrets:] The design decision based on mathematical theorems, physical
   facts, or programming considerations. The secrets of this module are
@@ -310,7 +246,8 @@ selected.
 
 \end{description}
 
->>>>>>> a8c2ef80d2b8d1eea264ca709c8b84d286703e2e
+
+
 \section{Traceability Matrix} \label{SecTM}
 
 This section shows the traceability matrix between the modules and the
@@ -337,7 +274,6 @@ R8 & M2,M4, M5\\
 \caption{Trace Between Requirements and Modules}
 \label{TblRT}
 \end{table}
-
 
 \section{Use Hierarchy Between Modules} \label{SecUse}
 
