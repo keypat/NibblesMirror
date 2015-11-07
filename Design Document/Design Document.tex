@@ -43,6 +43,8 @@ The following documentation is intended elaborate how the design of the snake ga
 \item New Project Members: This document can bring new team members up-to-date with the overview and structure of the game.
 
 \item Maintainers: This document can also used to understand the structure of the game and all of the modules within. It would then be the responsibility of the maintainers to update the Design document by mentioning any change they have made to it.
+
+\item Professor and TAs: As this document is being marked, the professors and TAs will have access to the document to determine if it was structured as intended. The document will also serve to give the Professor and the TAs an overview of the modules of the snake game.
 \end{itemize}
 
 The Snake game has been divided up into modules which hide information from other modules in the document in order to implement the Information Hiding principle of Software Engineering. Further, the modules only share the information amongst each other that is necessary. This is done to ensure the Low Coupling principle of Software Engineering. In order to read or modify values within different modules, there are getter and setter methods unique to the respective modules. This is done to implement the Encapsulation principle of Software Engineering.
@@ -60,26 +62,14 @@ There are two types of possible changes: Anticipated and Unlikely Changes. This 
 
 
 \begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item[\refstepcounter{acnum} \actheacnum \label{acParams}:] The format of the
-  input parameters.
-\item[\refstepcounter{acnum} \actheacnum \label{acOutput}:] The format of the
-  final output data.
-\item[\refstepcounter{acnum} \actheacnum \label{acODEs}:] How the governing ODEs
-  are defined using the input parameters.
-\item[\refstepcounter{acnum} \actheacnum \label{acEnergy}:] How the energy
-  equations are defined using the input parameters.
-\item[\refstepcounter{acnum} \actheacnum \label{acControl}:] How the overall
-  control of the calculations is orchestrated.
-\item[\refstepcounter{acnum} \actheacnum \label{acSeqDS}:] The implementation
-  for the sequence (array) data structure.
-\item[\refstepcounter{acnum} \actheacnum \label{acSolver}:] The algorithm used
-  for the ODE solver.
-\item[\refstepcounter{acnum} \actheacnum \label{acPlot}:] The implementation of
-  plotting data.
+\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific computer on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] Addition or modification of Keyboard and mouse commands as game is expanded in the future.
+\item[\refstepcounter{acnum} \actheacnum \label{acParams}:] The type of food which the snake eats.
+\item[\refstepcounter{acnum} \actheacnum \label{acOutput}:] What must happen after the game is over.
+\item[\refstepcounter{acnum} \actheacnum \label{acODEs}:] More options available in the menu as game expands .e.g. save game, high scores, sound, difficulty etc.
+\item[\refstepcounter{acnum} \actheacnum \label{acEnergy}:] The map of the game.
+\item[\refstepcounter{acnum} \actheacnum \label{acControl}:] Different PowerUps will be available such as Intangibility (.i.e. ability to go through walls) as the game expands.
+\item[\refstepcounter{acnum} \actheacnum \label{acSeqDS}:] The characteristics of the snake .e.g. its color, the way it grows, the speed at which it moves etc.
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -89,41 +79,26 @@ These are design decisions that have to be changed after they were fixed in the 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
   (Input: Keyboard, Mouse Output: Screen).
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
-  a source of input data external to the software.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] Output data are
-  displayed to the output device.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucGoal}:] The goal of the system
-  is to calculate temperatures and energies.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucODEstructure}:] The ODEs for
-  temperature can be defined using parameters defined in the input parameters module.
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucEnergyStructure}:] The energy
-  equations can be defined using the parameters defined in the input parameters module.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] The game will always be implemented in python using the Pygame library.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucOutput}:] The goal of the game is to get the highest score possible.
 \end{description}
 
 \section{Module Hierarchy} \label{SecMH}
 
-This section provides an overview of the module design. Modules are summarized
-in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
-below, which are leaves in the hierarchy tree, are the modules that will
-actually be implemented.
+This section lists the modules in the Snake game. The modules listed below are leaves in the module hierarchy in the table below. 
 
 \begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] Input Format Module
-\item [\refstepcounter{mnum} \mthemnum \label{mParams}:] Input Parameters Module
-\item [\refstepcounter{mnum} \mthemnum \label{mOutput}:] Output Format Module
-\item [\refstepcounter{mnum} \mthemnum \label{mODEs}:] Temperature ODEs Module
-\item [\refstepcounter{mnum} \mthemnum \label{mEnergy}:] Energy Equations Module
-\item [\refstepcounter{mnum} \mthemnum \label{mControl}:] Control Module
-\item [\refstepcounter{mnum} \mthemnum \label{mSeqDS}:] Sequence Data Structure Module
-\item [\refstepcounter{mnum} \mthemnum \label{mSolver}:] ODE Solver Module
-\item [\refstepcounter{mnum} \mthemnum \label{mPlot}:] Plotting Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware Hiding Module\
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Controller Module
+\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] Food Module
+\item [\refstepcounter{mnum} \mthemnum \label{mParams}:] GameOver Module
+\item [\refstepcounter{mnum} \mthemnum \label{mOutput}:] MainMenu Module
+\item [\refstepcounter{mnum} \mthemnum \label{mODEs}:] PlayMap Module
+\item [\refstepcounter{mnum} \mthemnum \label{mEnergy}:] PowerUp Module
+\item [\refstepcounter{mnum} \mthemnum \label{mSeqDS}:] Snake Module
 \end{description}
 
-Note that \mref{mHH} is a commonly used modules and are already implemented by the operating
-system.  It will not be reimplemented.  Similarly, \mref{mSeqDS}, \mref{mSolver}
-and \mref{mPlot} are already available in Matlab and will not be reimplemented.
+The Hardware-Hiding Module is already implemented by the operating system and hence will not be reimplemented.
 
 \begin{table}[h!]
 \centering
@@ -135,17 +110,17 @@ and \mref{mPlot} are already available in Matlab and will not be reimplemented.
 {Hardware-Hiding Module} & ~ \\
 \midrule
 
-\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} & Input Format Module\\
-& Input Parameters Module\\
-& Output Format Module\\
-& Temperature ODEs Module\\
-& Energy Equations Module\\ 
-& Control Module\\
+\multirow{6}{0.3\textwidth}{Behaviour-Hiding Module} 
+& Food Module\\
+& GameOver Module\\
+& MainMenu Module\\
+& PlayMap ODEs Module\\
+& PowerUp Module\\ 
+& Snake Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {Sequence Data Structure Module}\\
-& ODE Solver Module\\
-& Plotting Module\\
+\multirow{3}{0.3\textwidth}{Software Decision Module} 
+& Controller Module\\
 \bottomrule
 
 \end{tabular}
@@ -171,12 +146,9 @@ AC5 & M5\\
 AC6 & M6\\
 AC7 & M7\\
 AC8 & M8\\
-AC9 & M9\\
-AC10 & M10\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
-\label{TblRT}
 \end{table}
 
 \section{Module Decomposition} \label{SecMD}
