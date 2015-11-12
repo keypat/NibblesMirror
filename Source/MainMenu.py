@@ -1,6 +1,7 @@
 from PlayMap import *
 import pygame
 from GameOver import *
+from GamePause import *
 
 """
 Main Menu Class encapsulates the 'window' of the game
@@ -31,13 +32,15 @@ class MainMenu :
         #self.MENU = ['menu','game','gameOver']
         self.gameMap = PlayMap()
         self.gameOver = 'defaultVALUE'
+        self.gamePause = 'defaultVALUE'
+        self.pauseStatus = False
         #What stage of the interface the game is on
         self.state = 'menu'
         
         #Size of the window
         #self.size = [550,500]
-        self.startGameButton = pygame.Rect(150,200,100,150)
-        self.exitGameButton = pygame.Rect(300,200,100,150)
+        self.startGameButton = pygame.Rect(50,200,200,100)
+        self.exitGameButton = pygame.Rect(300,200,200,100)
         
         self.updateState()
 
@@ -54,10 +57,13 @@ class MainMenu :
 
         self.state = newState
         if self.state=='game':
-            self.gameMap = PlayMap()
-            print"PLAYMAP MADE"
+            if not(self.pauseStatus) :
+                self.gameMap = PlayMap()
         if self.state=='gameOver':
             self.gameOver = GameOver(self.gameMap.score)
+        if self.state=='gamePause':
+            self.pauseStatus = True
+            self.gamePause = GamePause(self.gameMap.score)
         
     #call necessary functions based on current state
     def updateState(self) :
@@ -73,11 +79,13 @@ class MainMenu :
             return [self.startGameButton,self.exitGameButton]
         if self.state=='game' :
             self.gameMap.updateState()
-            return self.gameMap.getCurrentState()
-            
+            return self.gameMap.getCurrentState()     
         if self.state=='gameOver' :
             self.gameOver.updateState(self.gameMap.score)
             return self.gameOver.getCurrentState()
+        if self.state=='gamePause' :
+            self.gamePause.updateState(self.gameMap.score)
+            return self.gamePause.getCurrentState()
     
     
 

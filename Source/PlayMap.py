@@ -54,8 +54,7 @@ class PlayMap:
                 input:none
                 output:none
                 """
-                
-                print "PlayMap.updateState ran"
+
                 self.snake.move()
                 # deal with food
                 
@@ -74,7 +73,6 @@ class PlayMap:
                 input:none
                 output:Boolean value
                 """
-                print "PlayMap.isSnakeDead ran"
                 status = self.didSnakeHitBorder() or self.didSnakeHitSelf()
                 return status
 
@@ -86,7 +84,6 @@ class PlayMap:
                 input:none
                 output:an array of objects
                 """
-                print "PlayMap.getCurrentState ran"
                 if self.isSnakeDead():
                         return -1
                 if self.powerUpStatus:
@@ -103,7 +100,6 @@ class PlayMap:
                 input:none
                 output:Boolean value
                 """
-                print "PlayMap.didSnakeHitBorder ran"
                 head = self.snake.points[0]
                 if head.left < 0: return True
                 if head.left >= self.width: return True
@@ -120,12 +116,9 @@ class PlayMap:
                 input:none
                 output:Boolean value
                 """
-                print "PlayMap.didSnakeHitSelf ran"
-                print self.snake.points
                 temp = len(self.snake.points)
                 i = 1
                 while i < temp :
-                    print i
                     if self.snake.points[0]==self.snake.points[i] :
                         if self.powerUpStatus :
                                 self.powerUpStatus=False
