@@ -20,7 +20,7 @@ class MainMenu :
     Assumptions: __init__() is called before any other access program
     
     """
-    #MENU = ['menu','game','gameOver']
+    #MENU = ['menu','game','gameOver','gamePause']
 
     def __init__(self) :
         """
@@ -41,6 +41,9 @@ class MainMenu :
         #self.size = [550,500]
         self.startGameButton = pygame.Rect(50,200,200,100)
         self.exitGameButton = pygame.Rect(300,200,200,100)
+        self.diff0Button = pygame.Rect(100,400,50,50)
+        self.diff1Button = pygame.Rect(200,400,50,50)
+        self.diff2Button = pygame.Rect(300,400,50,50)
         
         self.updateState()
 
@@ -56,10 +59,12 @@ class MainMenu :
         """
 
         self.state = newState
-        if self.state=='game':
+        if self.state =='menu' : self.pauseStatus = False
+        if self.state=='game' :
             if not(self.pauseStatus) :
                 self.gameMap = PlayMap()
         if self.state=='gameOver':
+            self.pauseStatus = False
             self.gameOver = GameOver(self.gameMap.score)
         if self.state=='gamePause':
             self.pauseStatus = True
@@ -76,7 +81,7 @@ class MainMenu :
         """
         #print "MainMenu.updateState ran"
         if self.state=='menu' :
-            return [self.startGameButton,self.exitGameButton]
+            return [self.startGameButton,self.exitGameButton,self.diff0Button,self.diff1Button,self.diff2Button]
         if self.state=='game' :
             self.gameMap.updateState()
             return self.gameMap.getCurrentState()     

@@ -29,7 +29,12 @@ font = pygame.font.Font(None,25)
 font2 = pygame.font.Font(None,20)
 
 mainMenu = MainMenu()
-foreground, background , menuCol= (255, 255, 255), (0, 0, 0), (255,0,0)
+gameSpeeds = [5,10,15]
+currentSpeed = 5
+foreground, background , menuCol, green, yellow, gray= (255, 255, 255), (0, 0, 0), (255,0,0), (0,130,0) , (255,255,0), (50,50,50)
+
+##############################################################################
+##############################################################################
 
 def updateGUIDisplay() :
     """
@@ -43,12 +48,26 @@ def updateGUIDisplay() :
     obj=mainMenu.updateState()
 
     if mainMenu.state=='menu' :
-        for rect in obj:
-            pygame.draw.rect(screen,foreground,rect)
+        pygame.draw.rect(screen,foreground,obj[0])
+        pygame.draw.rect(screen,foreground,obj[1])
+        pygame.draw.rect(screen,green,obj[2])
+        pygame.draw.rect(screen,yellow,obj[3])
+        pygame.draw.rect(screen,menuCol,obj[4])
+        
         surface = font.render('Play Game [SPACE]', True, menuCol)
         surface2 = font.render('Quit Game [q]', True, menuCol)
+        surface3 = font.render('Difficulty: ',True,foreground)
+        surface4 = font.render('1',True,background)
+        surface5 = font.render('2',True,background)
+        surface6 = font.render('3',True,background)
+        
         screen.blit(surface, (50, 250))
         screen.blit(surface2, (300, 250))
+        screen.blit(surface3, (50,300))
+        screen.blit(surface4, (100,400))
+        screen.blit(surface5, (200,400))
+        screen.blit(surface6, (300,400))
+        
         pygame.display.flip()
 
             
@@ -68,7 +87,7 @@ def updateGUIDisplay() :
             if i==2 : pygame.draw.rect(screen,foreground,obj[2])
             #if i==3 and obj[i]!=-1 : pygame.draw.rect(screen,menuCol,obj[3])
             #if i==4 and obj[i]!=-1 : pygame.draw.rect(screen,menuCol,obj[4])
-        surface = font2.render('SCORE:  '+str(mainMenu.gameMap.score), True, menuCol)
+        surface = font2.render('SCORE:  '+str(mainMenu.gameMap.score), True, green)
         screen.blit(surface, (200, 0))   
 
         pygame.display.flip()
@@ -109,25 +128,46 @@ def updateGUIDisplay() :
         pygame.display.flip()            
 
 
-
+##############################################################################
+##############################################################################
         
 def eventChecker() :
+    """
+    This method is the controller for our software model. This method
+    manages the behaviour changes of the system based on input from hardware.
+    """
+    
     changedDir = False
+    global currentSpeed
+    # Loops through the list of events that occured
     for event in pygame.event.get() :
             if event.type == QUIT:
                         pygame.quit()
                         sys.exit()
 
+            # Controlling for when the mouse is unclicked
             elif event.type == pygame.MOUSEBUTTONUP :
                 pos = pygame.mouse.get_pos()
+                 
                 if mainMenu.state=='menu' and mainMenu.startGameButton.collidepoint(pos) :
                         mainMenu.changeState('game')
                 if mainMenu.state=='menu' and mainMenu.exitGameButton.collidepoint(pos) :
                         pygame.event.post(pygame.event.Event(QUIT))
+                if mainMenu.state=='menu' and mainMenu.diff0Button.collidepoint(pos) :
+                        mainMenu.gameMap.setDiff(0)
+                        currentSpeed = gameSpeeds[0]
+                if mainMenu.state=='menu' and mainMenu.diff1Button.collidepoint(pos) :
+                        mainMenu.gameMap.setDiff(1)
+                        currentSpeed = gameSpeeds[1]
+                if mainMenu.state=='menu' and mainMenu.diff2Button.collidepoint(pos) :
+                        mainMenu.gameMap.setDiff(2)
+                        currentSpeed = gameSpeeds[2]
+                        
                 if mainMenu.state=='gameOver' and mainMenu.gameOver.retryButton.collidepoint(pos) :
                         mainMenu.changeState('game')
                 if mainMenu.state=='gameOver' and mainMenu.gameOver.exitButton.collidepoint(pos) :
                         pygame.event.post(pygame.event.Event(QUIT))
+                        
                 if mainMenu.state=='gamePause' and mainMenu.gamePause.menuButton.collidepoint(pos) :
                         mainMenu.changeState('menu')
                 if mainMenu.state=='gamePause' and mainMenu.gamePause.exitButton.collidepoint(pos) :
@@ -149,20 +189,20 @@ def eventChecker() :
                         changedDir = True
                 if event.key==K_ESCAPE and mainMenu.state=='game' :
                         mainMenu.changeState('gamePause')
-                        print 'gamePaused'
                 if event.key == K_SPACE and mainMenu.state!='game' : mainMenu.changeState('game')
                 if event.key == K_m and mainMenu.state=='gamePause' : mainMenu.changeState('menu')
-                #if event.key == K_ESCAPE and mainMenu.state=='gamePause' : mainMenu.changeState('game')
                 if event.key == K_q:
                     pygame.event.post(pygame.event.Event(QUIT))
     return 1
 
+##############################################################################
+##############################################################################
 
 def main() :
         while 1:
                 if mainMenu.state!='game' : clock.tick(30)
-                else: clock.tick(min(5 + (mainMenu.gameMap.score / 4), 30))
-
+                else: clock.tick(min(currentSpeed + (mainMenu.gameMap.score / 4), 30))
+                    
                 if eventChecker() == 0 :
                         return
                 updateGUIDisplay()

@@ -41,10 +41,20 @@ class PlayMap:
                 self.powerUpStatus = True
                 self.gameStatsBar = pygame.Rect(0,0,550,20)
                 self.powerUpIndicator = pygame.Rect(10,0,10,10)
-                self.score = len(self.snake.points)  
+                self.score = len(self.snake.points)
+                self.diff = 0
 
 
-
+        def setDiff(self,difficulty) :
+                """
+                function to set the base difficulty of the game (speed of snake)
+                
+                transition: updates the difficulty of the game
+                input: integer to represent difficulty
+                output: none
+                """
+                self.diff=difficulty
+        
         def updateState(self):
                 """
                 function to update the current state of the game board
