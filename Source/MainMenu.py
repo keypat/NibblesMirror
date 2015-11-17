@@ -91,9 +91,3 @@ class MainMenu :
         if self.state=='gamePause' :
             self.gamePause.updateState(self.gameMap.score)
             return self.gamePause.getCurrentState()
-    
-    
-
-
-            
-        

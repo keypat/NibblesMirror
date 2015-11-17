@@ -16,6 +16,3 @@ class PowerUp:
             output:none
         """
         self.position = pygame.Rect(random.randrange(55) * 10, random.randrange(45) * 10, 10, 10)
-
-
-
