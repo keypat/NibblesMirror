@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Anticipated and Unlikely Changes}{2}
+\contentsline {subsection}{\numberline {2.1}Anticipated Changes}{2}
+\contentsline {subsection}{\numberline {2.2}Unlikely Changes}{3}
+\contentsline {section}{\numberline {3}Module Hierarchy}{3}
+\contentsline {section}{\numberline {4}Connection Between Requirements and Design}{4}
+\contentsline {section}{\numberline {5}Module Decomposition}{4}
+\contentsline {subsection}{\numberline {5.1}Behaviour-Hiding Module}{4}
+\contentsline {subsubsection}{\numberline {5.1.1}Food (M1)}{5}
+\contentsline {subsubsection}{\numberline {5.1.2}GameOver Module (M2)}{5}
+\contentsline {subsubsection}{\numberline {5.1.3}MainMenu Module (M3)}{5}
+\contentsline {subsubsection}{\numberline {5.1.4}PlayMap Module (M4)}{5}
+\contentsline {subsubsection}{\numberline {5.1.5}PowerUp Module (M5)}{5}
+\contentsline {subsubsection}{\numberline {5.1.6}Snake Module (M6)}{5}
+\contentsline {subsubsection}{\numberline {5.1.7}Controller Module (M7)}{6}
+\contentsline {section}{\numberline {6}Traceability Matrix}{6}
+\contentsline {section}{\numberline {7}Use Hierarchy Between Modules}{6}
+\contentsline {section}{\numberline {8}Course Schedule}{8}
