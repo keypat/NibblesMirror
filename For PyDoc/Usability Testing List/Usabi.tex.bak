@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+\title{Test Report}
+\author{Alex Guerrero - guerreap\\Keyur Patel - patelk36\\Shafeeq Rabbani - rabbass}
+\date{\today}
+\maketitle
+
+\section{Usability Testing}
+\subsection{Criteria}
+\subsection{Results}
+
+\begin{equation}
+f(x) = x^2 + 1
+\end{equation}
+
+\begin{align*}
+1	2	\t&3\\
+2	\t&3	\t1\\
+&3\t	1	\t2
+\end{align*}
+
+
+
+
+\pagenumbering{arabic}
+\end{document}
+

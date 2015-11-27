@@ -1,0 +1,453 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.30)  7 NOV 2015 00:46
+entering extended mode
+**"Design Document.tex"
+("Design Document.tex"
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count87
+\calc@Bcount=\count88
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count89
+\calc@Cskip=\skip46
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count90
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+\AM@pagewidth=\dimen107
+\AM@pageheight=\dimen108
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks15
+\c@AM@survey=\count91
+\AM@templatesizebox=\box27
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip47
+\bibsep=\skip48
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count92
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen109
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen110
+\lightrulewidth=\dimen111
+\cmidrulewidth=\dimen112
+\belowrulesep=\dimen113
+\belowbottomsep=\dimen114
+\aboverulesep=\dimen115
+\abovetopsep=\dimen116
+\cmidrulesep=\dimen117
+\cmidrulekern=\dimen118
+\defaultaddspace=\dimen119
+\@cmidla=\count93
+\@cmidlb=\count94
+\@aboverulesep=\dimen120
+\@belowrulesep=\dimen121
+\@thisruleclass=\count95
+\@lastruleclass=\count96
+\@thisrulewidth=\dimen122
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks16
+\float@box=\box28
+\@float@everytoks=\toks17
+\@floatcapt=\box29
+)
+\c@acnum=\count98
+\c@ucnum=\count99
+\c@mnum=\count100
+ ("Design Document.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+\AtBeginShipoutBox=\box30
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen123
+\scratchbox=\box31
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen124
+\MPnumerator=\count105
+\makeMPintoPDFobject=\count106
+\everyMPtoPDFconversion=\toks19
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+
+("Design Document.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write3
+ [1
+
+{C:/Users/Shafeeq/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+
+[2]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3] [4] [5] <UsesHeirarchy.pdf, id=21, 597.23125pt x 845.1575pt>
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+
+<use UsesHeirarchy.pdf>
+Package pdftex.def Info: UsesHeirarchy.pdf used on input line 267.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+ <use UsesHeirarchy.pdf>
+Package pdftex.def Info: UsesHeirarchy.pdf used on input line 267.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<UsesHeirarchy.pdf, id=24, page=1, 597.23125pt x 845.1575pt>
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+
+<use UsesHeirarchy.pdf, page 1>
+Package pdftex.def Info: UsesHeirarchy.pdf, page1 used on input line 267.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+ <use UsesHeirarchy.pdf, page 1>
+Package pdftex.def Info: UsesHeirarchy.pdf, page1 used on input line 267.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [6]
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+
+<use UsesHeirarchy.pdf, page 1>
+Package pdftex.def Info: UsesHeirarchy.pdf, page1 used on input line 267.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+ <use UsesHeirarchy.pdf, page 1>
+Package pdftex.def Info: UsesHeirarchy.pdf, page1 used on input line 267.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: UsesHeirarchy.pdf Graphic file (type pdf)
+
+<use UsesHeirarchy.pdf, page 1>
+Package pdftex.def Info: UsesHeirarchy.pdf, page1 used on input line 267.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [7 <./UsesHeirarchy.pdf>]
+<GanttChart.pdf, id=35, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf>
+Package pdftex.def Info: GanttChart.pdf used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+
+<GanttChart.pdf, id=43, page=1, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 1>
+Package pdftex.def Info: GanttChart.pdf, page1 used on input line 273.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 1>
+Package pdftex.def Info: GanttChart.pdf, page1 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [8]
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 1>
+Package pdftex.def Info: GanttChart.pdf, page1 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 1>
+Package pdftex.def Info: GanttChart.pdf, page1 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 1>
+Package pdftex.def Info: GanttChart.pdf, page1 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [9 <./GanttChart.pdf, page is rotated 90 degrees>] <GanttChart.pdf, id=56, pag
+e=2, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 2>
+Package pdftex.def Info: GanttChart.pdf, page2 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 2>
+Package pdftex.def Info: GanttChart.pdf, page2 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 2>
+Package pdftex.def Info: GanttChart.pdf, page2 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [10 <./GanttChart.pdf, page is rotated 90 degrees>] <GanttChart.pdf, id=60, pa
+ge=3, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 3>
+Package pdftex.def Info: GanttChart.pdf, page3 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 3>
+Package pdftex.def Info: GanttChart.pdf, page3 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 3>
+Package pdftex.def Info: GanttChart.pdf, page3 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [11 <./GanttChart.pdf, page is rotated 90 degrees>] <GanttChart.pdf, id=64, pa
+ge=4, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 4>
+Package pdftex.def Info: GanttChart.pdf, page4 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 4>
+Package pdftex.def Info: GanttChart.pdf, page4 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 4>
+Package pdftex.def Info: GanttChart.pdf, page4 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [12 <./GanttChart.pdf, page is rotated 90 degrees>] <GanttChart.pdf, id=68, pa
+ge=5, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 5>
+Package pdftex.def Info: GanttChart.pdf, page5 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 5>
+Package pdftex.def Info: GanttChart.pdf, page5 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 5>
+Package pdftex.def Info: GanttChart.pdf, page5 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [13 <./GanttChart.pdf, page is rotated 90 degrees>] <GanttChart.pdf, id=186, p
+age=6, 845.1575pt x 597.23125pt>
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 6>
+Package pdftex.def Info: GanttChart.pdf, page6 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+ <use GanttChart.pdf, page 6>
+Package pdftex.def Info: GanttChart.pdf, page6 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: GanttChart.pdf Graphic file (type pdf)
+
+<use GanttChart.pdf, page 6>
+Package pdftex.def Info: GanttChart.pdf, page6 used on input line 273.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [14 <./GanttChart.pdf, page is rotated 90 degrees>] <PERTChart.pdf, id=200, 18
+06.75pt x 2509.375pt>
+File: PERTChart.pdf Graphic file (type pdf)
+ <use PERTChart.pdf>
+Package pdftex.def Info: PERTChart.pdf used on input line 274.
+(pdftex.def)             Requested size: 1806.7456pt x 2509.36891pt.
+File: PERTChart.pdf Graphic file (type pdf)
+
+<use PERTChart.pdf>
+Package pdftex.def Info: PERTChart.pdf used on input line 274.
+(pdftex.def)             Requested size: 1806.7456pt x 2509.36891pt.
+ <PERTChart.pdf, id=203, page=1, 1806.75pt x 2509.375pt>
+File: PERTChart.pdf Graphic file (type pdf)
+
+<use PERTChart.pdf, page 1>
+Package pdftex.def Info: PERTChart.pdf, page1 used on input line 274.
+(pdftex.def)             Requested size: 1806.7456pt x 2509.36891pt.
+File: PERTChart.pdf Graphic file (type pdf)
+ <use PERTChart.pdf, page 1>
+Package pdftex.def Info: PERTChart.pdf, page1 used on input line 274.
+(pdftex.def)             Requested size: 572.43752pt x 795.05212pt.
+File: PERTChart.pdf Graphic file (type pdf)
+
+<use PERTChart.pdf, page 1>
+Package pdftex.def Info: PERTChart.pdf, page1 used on input line 274.
+(pdftex.def)             Requested size: 572.43752pt x 795.05212pt.
+File: PERTChart.pdf Graphic file (type pdf)
+ <use PERTChart.pdf, page 1>
+Package pdftex.def Info: PERTChart.pdf, page1 used on input line 274.
+(pdftex.def)             Requested size: 572.43752pt x 795.05212pt.
+File: PERTChart.pdf Graphic file (type pdf)
+
+<use PERTChart.pdf, page 1>
+Package pdftex.def Info: PERTChart.pdf, page1 used on input line 274.
+(pdftex.def)             Requested size: 572.43752pt x 795.05212pt.
+ [15 <./PERTChart.pdf>]
+No file "Design Document".bbl.
+("Design Document.aux") ) 
+Here is how much of TeX's memory you used:
+ 3029 strings out of 493673
+ 41293 string characters out of 3143954
+ 112045 words of memory out of 3000000
+ 6345 multiletter control sequences out of 15000+200000
+ 8808 words of font info for 31 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 39i,18n,43p,580b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Design Document.pdf" (15 pages, 338618 bytes).
+PDF statistics:
+ 242 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+
