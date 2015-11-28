@@ -31,10 +31,9 @@ class PlayMap:
                 output:none
                 """
                 
-                print "PlayMap constructor ran"
                 self.height = 500
                 self.width = 550
-                self.snake = Snake(250, 290) # starting coord of snake
+                self.snake = Snake() # starting coord of snake
                 self.food = Food()
                 self.powerUp = PowerUp()
 
