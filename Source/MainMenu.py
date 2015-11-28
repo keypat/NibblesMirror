@@ -20,7 +20,6 @@ class MainMenu :
     Assumptions: __init__() is called before any other access program
     
     """
-    #MENU = ['menu','game','gameOver','gamePause']
 
     def __init__(self) :
         """
@@ -28,11 +27,10 @@ class MainMenu :
         Transition: initialized to main menu state
         exception: none
         """
-        print "MainMenu constructor ran"
-        #self.MENU = ['menu','game','gameOver']
+        self.STATES = ['menu','game','gameOver','gamePause']
         self.gameMap = PlayMap()
-        self.gameOver = 'defaultVALUE'
-        self.gamePause = 'defaultVALUE'
+        self.gameOver = GameOver(20)
+        self.gamePause = GamePause(20)
         self.pauseStatus = False
         #What stage of the interface the game is on
         self.state = 'menu'
@@ -47,6 +45,9 @@ class MainMenu :
         
         self.updateState()
 
+    def __repr__(self) :
+        return (str(self.startGameButton)+str(self.exitGameButton)+str(self.diff0Button)+ str(self.diff1Button) + str(self.diff2Button) + str(self.state))
+
     #Add ValueError exception
     #change value of self.state
     def changeState(self,newState) :
@@ -58,7 +59,7 @@ class MainMenu :
         output: none
         """
 
-        self.state = newState
+        if self.STATES.count(newState)==1 : self.state = newState
         if self.state =='menu' : self.pauseStatus = False
         if self.state=='game' :
             if not(self.pauseStatus) :
