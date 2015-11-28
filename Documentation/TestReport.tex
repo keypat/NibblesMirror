@@ -200,7 +200,6 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 
 \includegraphics{testFoodResults}\newline\newline
 
->>>>>>> 3149efc5a119a82b2728718472657e05520003fd
 \includegraphics{testPlayMapResults}\newline\newline
 \includegraphics{testGamePauseResults}\newline\newline
 \includegraphics{testGameOverResults}\newline\newline
@@ -277,5 +276,68 @@ ing had it been multiplayer.\\ \hline
 	Suggested Improvements & Fix the lag. Add more modes such as a 			mode to make the snake go through one wall and come out from the 		other side. Add obstacles for the snake. Reward 'bonus' food 			points which appear for 5 seconds and disappear if not eaten by 		snake within this time. \\ \hline
 	\end{longtable}
 \end{center}
+\newpage
+\section{GUI Testing}
+
+All features of the graphical user interface were tested to see that they correctly respond to the inputs let they be from mouse or the keyboard. 
+\\
+\textbf{Test Input:} The program is first run.\\
+\textbf{Expected:} The option menu appears.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{startmenu.png}\\
+\textbf{Test Input:} In the option menu, Play Game is clicked or the space bar is pressed.\\
+\textbf{Expected:} The snake game begins.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{startgame.png}\\
+\\
+\textbf{Test Input:} In the game, UP arrow key is pressed while the snake is horizontally positioned.\\
+\textbf{Expected:} The snake turns up.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{snakeup.png}
+\\
+\textbf{Test Input:} The DOWN arrow key is pressed when the snake is horizontally positioned.\\
+\textbf{Expected:} The snake turns down.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{snakedown.png}\\
+\\
+\textbf{Test Input:} the RIGHT arrow key is pressed when the snake vertically positioned.\\
+\textbf{Expected:} The snake turns right.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{snakeright.png}\\
+\\
+\textbf{Test Input:} The LEFT arrow key is pressed when the snake is vertically positioned.\\
+\textbf{Expected:} The snake turns left.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{snakeleft.png}\\
+\\
+\textbf{Test Input:} The snake crashes into itself.\\
+\textbf{Expected:} ,It's Power up will be used, the size of the snake will shrink and the red head disappears.\\
+\textbf{Output:} Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{powerup.png}\\
+\\
+\textbf{Test Input:} The snake crashes the border.\\
+\textbf{Expected:} The Game Over screen pops up and the game ends. The screen displays the score and options to either restart or quit the game.\\
+\textbf{Output:} Pass.\\
+Before: \pagebreak\includegraphics[width=\textwidth]{startgame.png}\\
+
+After: \pagebreak\includegraphics[width=\textwidth]{crash.png}\\
+\\
+\textbf{Test Input:} In the game over menu, the space bar is pressed.\\
+\textbf{Expected:} The game successfully restarts.\\
+\textbf{Output:}  Pass.\\
+\pagebreak
+\includegraphics[width=\textwidth]{restart.png}
+\\
+\textbf{Test Input:} The letter 'q is pressed in the options menu, during the game and in the game over menu. \\
+\textbf{Expected:} Pressing q quits the program.\\
+\textbf{Output:} Pass.\\
+Program window successfully closed in all three test cases.\\
 
 \end{document}
