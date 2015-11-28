@@ -18,8 +18,7 @@ class GameOver:
         """
         self.score = score
         self.retryButton = pygame.Rect(100,200,150,100)
-        self.exitButton = pygame.Rect(200,350,150,100)
-        self.menuButton = pygame.Rect(300,200,150,100)
+        self.exitButton = pygame.Rect(300,200,150,100)
         
     def updateState(self,score) :
         """
@@ -39,4 +38,4 @@ class GameOver:
             input:none
             output:an array of objects
         """
-        return [self.score,self.retryButton,self.menuButton,self.exitButton]
+        return [self.score,self.retryButton,self.exitButton]

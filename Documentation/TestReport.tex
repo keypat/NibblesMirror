@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{booktabs}
+
+%\usepackage{refcheck}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+      colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+\usepackage{fullpage}
+
+\begin{document}
+
+\title{Test Plan} 
+\author{Alex Guerrero, Keyur Patel and Shafeeq Rabbani}
+\date{\today}
+
+\maketitle
+
+\section{Revisions}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} | p{4cm} |}
+	\caption{Revisions} \\ \hline \label{TblInputVar} 
+	Name & Date & Description\\ \hline
+	Keyur Patel & 27/11/2015 &  Created Test Report latex file\\ \hline
+	\end{longtable}
+\end{center}
+
+\tableofcontents
+\newpage
+
+
+
+\section{Features that were Tested}
+
+\begin{itemize}
+\item 1:The functional requirements of the product
+\item 2:The classes and methods of the product (Model)
+\item 3:The GUI of the product
+\end{itemize}
+
+\section{Testing Types}
+Testing can be broken up into different types, which each have their own role in the testing the product. These test types should be utilized to comprehensively evaluate the quality of the product.
+\subsection{Structural Testing}
+Structural testing  is also known as white box testing. Structural tests are derived from the program's internal structure. It focuses on the nonfunctional requirements of the product. This type of testing shows errors that occur during the implementation by focusing on abnormal and extreme cases the product could encounter.
+\subsection{Functional Testing}
+Functional testing is also known as black box testing. Functional tests are derived from the functional requirements of the program. It focuses less on how the program works and more on the output of the system. These tests are focused on test cases where the product receives expected information.
+\subsection{Static vs. Dynamic Testing}
+Static testing simulate the dynamic environment and does not focus on code exectution. This testing involves code walkthroughs and requirements walkthroughs. Static testing is used prevalently in the design stage. In contrast, dynamic testing needs code to be executed. \newline\newline
+Dynamic testing involves test cases to be run and checked against expected outcomes. A technique to save time during dynamic testing is to choose representative test cases. 
+\subsection{Manual vs. Automatic Testing}
+Manual testing is done by people. It involves code walkthroughs and inspection. \newline\newline
+Automatic testing can usually be conducted by computers. The tools used to assist with automatic are unit testing tools for the respective programming language. Automatic testing relies on people for testing more qualitative aspects like GUI. 
+
+
+\section{Automated Unit Testing}
+
+\section{Testing functional requirements}
+
+\end{document}

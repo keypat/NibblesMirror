@@ -29,10 +29,10 @@ class Food:
         #offset to skip the header (which contains score)
         offset = 20
 
-        #randomly generate the a y position on the screen to display the food
+        #randomly generate the a x position on the screen to display the food
         xVal = random.randrange(55)
 
-        #randomly generate the an x position on the screen to display the food
+        #randomly generate the an y position on the screen to display the food
         yVal = random.randrange(48)
 
         #position has x and y values.

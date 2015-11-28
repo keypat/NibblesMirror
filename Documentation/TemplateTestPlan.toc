@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Test Items}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Software Risk Issues}{3}{section.2}
+\contentsline {section}{\numberline {3}Features to be Tested}{3}{section.3}
+\contentsline {section}{\numberline {4}Features not to be Tested}{3}{section.4}
+\contentsline {section}{\numberline {5}Testing Types}{3}{section.5}
+\contentsline {subsection}{\numberline {5.1}Structural Testing}{3}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Functional Testing}{3}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Static vs. Dynamic Testing}{4}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Manual vs. Automatic Testing}{4}{subsection.5.4}
+\contentsline {section}{\numberline {6}Test Factors}{4}{section.6}
+\contentsline {subsection}{\numberline {6.1}Reliability}{4}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Correctness}{4}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Ease of Use}{4}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Maintainable}{4}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Performance}{5}{subsection.6.5}
+\contentsline {section}{\numberline {7}Testing functional requirements}{5}{section.7}
+\contentsline {subsection}{\numberline {7.1}Checking status of the game}{5}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Game ends if snake collides with itself}{6}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}The snake grows by one unit when it eats food}{6}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Snake must be controlled by the keyboard}{7}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Calculate a score based on the length of the snake}{8}{subsection.7.5}
+\contentsline {section}{\numberline {8}Future Testing}{9}{section.8}
+\contentsline {subsection}{\numberline {8.1}Test Cases for Snake.py}{9}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Test Cases for Map.py}{9}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Test Cases for Food.py}{9}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Testing for GUI}{9}{subsection.8.4}

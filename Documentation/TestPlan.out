@@ -1,0 +1,27 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Test Items}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Software Risk Issues}{}% 3
+\BOOKMARK [1][-]{section.3}{Features to be Tested}{}% 4
+\BOOKMARK [1][-]{section.4}{Features not to be Tested}{}% 5
+\BOOKMARK [1][-]{section.5}{Testing Types}{}% 6
+\BOOKMARK [2][-]{subsection.5.1}{Structural Testing}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Functional Testing}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.3}{Static vs. Dynamic Testing}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.4}{Manual vs. Automatic Testing}{section.5}% 10
+\BOOKMARK [1][-]{section.6}{Test Factors}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Reliability}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{Correctness}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.3}{Ease of Use}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.4}{Maintainable}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.5}{Performance}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Testing functional requirements}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Checking status of the game}{section.7}% 18
+\BOOKMARK [2][-]{subsection.7.2}{Game ends if snake collides with itself}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.3}{The snake grows by one unit when it eats food}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.4}{Snake must be controlled by the keyboard}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.5}{Calculate a score based on the length of the snake}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{Future Testing}{}% 23
+\BOOKMARK [2][-]{subsection.8.1}{Test Cases for Snake.py}{section.8}% 24
+\BOOKMARK [2][-]{subsection.8.2}{Test Cases for Map.py}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.3}{Test Cases for Food.py}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.4}{Testing for GUI}{section.8}% 27
