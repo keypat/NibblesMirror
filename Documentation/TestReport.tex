@@ -16,6 +16,7 @@
 \usepackage{booktabs}
 
 %\usepackage{refcheck}
+\usepackage{graphicx}
 
 \hypersetup{
     bookmarks=true,         % show bookmarks bar?
@@ -30,7 +31,7 @@
 
 \begin{document}
 
-\title{Test Plan} 
+\title{Test Report} 
 \author{Alex Guerrero, Keyur Patel and Shafeeq Rabbani}
 \date{\today}
 
@@ -42,6 +43,7 @@
 	\caption{Revisions} \\ \hline \label{TblInputVar} 
 	Name & Date & Description\\ \hline
 	Keyur Patel & 27/11/2015 &  Created Test Report latex file\\ \hline
+	Keyur Patel & 27/11/2015 &  Added table template for unit testing AND info\\ \hline
 	\end{longtable}
 \end{center}
 
@@ -73,6 +75,105 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 
 
 \section{Automated Unit Testing}
+\subsection{Testing for Snake.py}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for constructor} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for changeDir} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for grow} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for move} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for remove} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\subsection{Testing for MainMenu.py}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for constructor} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for changeState} \\ \hline \label{TblInputVar} 
+	Function Tested & input\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & an array of all possible directions \\ \hline
+	Function Input & none \\ \hline
+	Test Description & constructor equality test\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\includegraphics{testSnakeResults}\newline\newline
+\includegraphics{testFoodResults}\newline\newline
+\includegraphics{testMainMenuResults}\newline\newline
+\includegraphics{testPlayMapResults}\newline\newline
+\includegraphics{testGamePauseResults}\newline\newline
+\includegraphics{testGameOverResults}\newline\newline
 
 \section{Testing functional requirements}
 
