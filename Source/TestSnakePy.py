@@ -10,6 +10,7 @@ class TestSnakePy(unittest.TestCase) :
         global grownSnakes
         global changeDirVars
         global removeIndexes
+        global grownSnakes
         sConstructor = Snake()
         changeDirVars = [-1,1,-2,2]
 ##        
@@ -26,14 +27,14 @@ class TestSnakePy(unittest.TestCase) :
         directionSnakes = [DOWN,UP,LEFT,RIGHT]
 ##
         grownSnakes = []
-        for i in range(4) : grownSnakes.insert(i,directionSnakes[i].grow())
+        for i in range(4) :
+            directionSnakes[i].grow()
+            grownSnakes.insert(i,directionSnakes[i])
             
-        removeIndexes = [5,10,15]
+        removeIndexes = [30,5,10,15,-2]
         pass
         
-
     def test_constructorTests(self) :
-        global sConstructor
         self.assertEquals(str(Snake()),str(sConstructor))
 
     def test_changeDirTests(self) :
@@ -73,17 +74,35 @@ class TestSnakePy(unittest.TestCase) :
                     if j<2 : self.assertEquals(changeDirVars[j],obj)
                     else : self.assertEquals(directionSnakes[i].direction,obj)
 
+    def test_grow(self) :
+        UP = Snake()
+        UP.changeDir(2)
+        UP.move()
+        UP.changeDir(1)
+        DOWN = Snake()
+        RIGHT = Snake()
+        RIGHT.changeDir(2)
+        LEFT = Snake()
+        LEFT.changeDir(-2)
         
+        directionSnakes = [DOWN,UP,LEFT,RIGHT]
+
+        for i in range(4) :
+            directionSnakes[i].grow()
+            self.assertEquals(str(directionSnakes[i]),str(grownSnakes[i]))    
     
     def test_remove(self) :
         
         for i in removeIndexes :
             x = Snake()
-            x.remove(i)
-            self.assertEquals(i+1,len(x.points))
         
-            
-            
+            if i>len(x.points) : self.assertRaises(IndexError,x.remove(i))
+            elif i<0 : self.assertRaises(IndexError,x.remove(i))
+            else :
+                x.remove(i)
+                self.assertEquals(i+1,len(x.points))
+
+                
 
 
 if __name__ == '__main__' :

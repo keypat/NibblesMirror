@@ -15,14 +15,13 @@ class Snake:
     """
     
     # x,y coordinate of the head of the snake
-    def __init__(self,x,y):
+    def __init__(self):
         """
             Constructor method for Snake
             Transition: initialized into new snake of length 20
-            input:x,y coordinates of the head of the snake
+            input:none
             output:none
         """
-        self.life = True 
         #DIRECTIONS: -1=down,1=up,-2=left,2=right
         self.direction = -1
         # READ AS: points[i] shows [x,y] for ith object
@@ -30,8 +29,14 @@ class Snake:
 
         #make a vertical snake 20 points long
         for i in range(20):
-            self.points.insert(i,pygame.Rect(x,y-i*10,10,10))
+            self.points.insert(i,pygame.Rect(250,290-i*10,10,10))
 
+
+
+    def __repr__(self) :
+        return (str(self.points)+str(self.direction))
+    
+        
     # updates direction if it is valid
     def changeDir(self,direction):
         """
@@ -89,7 +94,8 @@ class Snake:
             input:integer value corresponding to an index value
             output:none
         """
-        i = len(self.points)
-        while len(self.points) != index+1 : self.points.pop()
-            
+        try:
+            while len(self.points) != index+1 : self.points.pop()
+        except IndexError:
+            pass
                         

@@ -30,10 +30,10 @@ class Food:
         offset = 20
 
         #randomly generate the a y position on the screen to display the food
-        yVal = random.randrange(55)
+        xVal = random.randrange(55)
 
         #randomly generate the an x position on the screen to display the food
-        xVal = random.randrange(48)
+        yVal = random.randrange(48)
 
         #position has x and y values.
         self.position = pygame.Rect(xVal * scaleFactor, yVal * scaleFactor + offset, blockWidth, blockLength)
