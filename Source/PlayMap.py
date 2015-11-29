@@ -32,7 +32,10 @@ class PlayMap:
                 """
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 73e749b709e6e2a4140f64775ea02dfa017fbde5
 =======
 >>>>>>> 73e749b709e6e2a4140f64775ea02dfa017fbde5
                 self.height = 500
