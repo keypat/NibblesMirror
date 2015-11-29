@@ -96,7 +96,6 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 
 \section{Automated Unit Testing}
 \subsection{Testing for Snake.py}
-\includegraphics{testSnakeResults}\newline\newline
 \begin{center}
 	\begin{longtable}{ | r | p{4cm} | p{10cm} }
 	\caption{Test Case for constructor} \\ \hline \label{TblInputVar} 
@@ -147,10 +146,10 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 	\textbf{Testing Type} & Correctness,Robustness\\ \hline
 	
 	\end{longtable}
+\includegraphics{testSnakeResults}\newline\newline
 \end{center}
 
 \subsection{Testing for MainMenu.py}
-\includegraphics{testMainMenuResults}\newline\newline
 \begin{center}
 	\begin{longtable}{ | r | p{4cm} | p{10cm} }
 	\caption{Test Case for constructor} \\ \hline \label{TblInputVar} 
@@ -175,6 +174,7 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 	\textbf{Testing Type} & Correctness,Robustness\\ \hline
 	
 	\end{longtable}
+\includegraphics{testMainMenuResults}\newline\newline
 \end{center}
 
 
@@ -193,16 +193,144 @@ Automatic testing can usually be conducted by computers. The tools used to assis
 \includegraphics{testFoodResults}\newline\newline	
 \end{center}
 
-\includegraphics{testSnakeResults}\newline\newline
+\subsection{Testing for PlayMap.py}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for setDiff} \\ \hline \label{TblInputVar} 
+	Function Tested & setDiff(difficulty)\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & difficulty changes to number passed  \\ \hline
+	Function Input & 0, 1, and 2 \\ \hline
+	Test Description & Assert that difficult changes after being set\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
 
-\includegraphics{testMainMenuResults}\newline\newline
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for didSnakeHitBoarder} \\ \hline \label{TblInputVar} 
+	Function Tested & didSnakeHitBoarder()\\ \hline
+	Preconditions & moving snake head to desired test location \\ \hline
+	Expected outcome & Return true when snake hits border, False else  \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that function returns true only when snake hits border \\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
 
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for didSnakeHitSelf} \\ \hline \label{TblInputVar} 
+	Function Tested & didSnakeHitSelf()\\ \hline
+	Preconditions & moving snake head to desired test location \\ \hline
+	Expected outcome & Return True when snake hits self, False else \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that function returns true only when snake hits self \\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+	
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for isSnakeDead} \\ \hline \label{TblInputVar} 
+	Function Tested & isSnakeDead()\\ \hline
+	Preconditions & moving snake head to desired test location \\ \hline
+	Expected outcome & Return True when snake dies, False else \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that snake dies when it hits itself or a border\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
 
-\includegraphics{testFoodResults}\newline\newline
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for updateState} \\ \hline \label{TblInputVar} 
+	Function Tested & updateState()\\ \hline
+	Preconditions & snake and food position \\ \hline
+	Expected outcome & Snake grows by 1 when it eats food, remains the same length else \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that playMap updates correctly \\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
 
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for getCurrentState} \\ \hline \label{TblInputVar} 
+	Function Tested & getCurrentState()\\ \hline
+	Preconditions & moving snake head to desired test location \\ \hline
+	Expected outcome & Return -1 when dead, an array of state variables else \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that getCurrentState returns correct value\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
 \includegraphics{testPlayMapResults}\newline\newline
+\end{center}
+
+
+\subsection{Testing for GamePause.py}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for updateState} \\ \hline \label{TblInputVar} 
+	Function Tested & updateState(score)\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & Score variable in pause updates to number passed  \\ \hline
+	Function Input & 21 \\ \hline
+	Test Description & Assert that score changes after being updated\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for getCurrentState} \\ \hline \label{TblInputVar} 
+	Function Tested & getCurrentState()\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & Return an array consisting of score, and the 4 buttons on the display  \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that function returns the proper array of items \\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
 \includegraphics{testGamePauseResults}\newline\newline
+\end{center}
+
+\subsection{Testing for GameOver.py}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for updateState} \\ \hline \label{TblInputVar} 
+	Function Tested & updateState(score)\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & Score variable in pause updates to number passed  \\ \hline
+	Function Input & 21 \\ \hline
+	Test Description & Assert that score changes after being updated\\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
+
+\end{center}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} }
+	\caption{Test Case for getCurrentState} \\ \hline \label{TblInputVar} 
+	Function Tested & getCurrentState()\\ \hline
+	Preconditions & none \\ \hline
+	Expected outcome & Return an array consisting of score, and the 2 buttons on the display  \\ \hline
+	Function Input & none \\ \hline
+	Test Description & Assert that function returns the proper array of items \\ \hline
+	Testing Type & Correctness\\ \hline
+	
+	\end{longtable}
 \includegraphics{testGameOverResults}\newline\newline
+\end{center}
+
 
 \section{Testing functional requirements}
 \section{Usability Testing}
