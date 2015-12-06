@@ -2,6 +2,7 @@ from PlayMap import *
 import pygame
 from GameOver import *
 from GamePause import *
+from GameInstructions import *
 
 """
 Main Menu Class encapsulates the 'window' of the game
@@ -27,16 +28,17 @@ class MainMenu :
         Transition: initialized to main menu state
         exception: none
         """
-        self.STATES = ['menu','game','gameOver','gamePause']
+        self.STATES = ['menu','game','gameOver','gamePause','instructions']
         self.gameMap = PlayMap()
         self.gameOver = GameOver(20)
         self.gamePause = GamePause(20)
+        self.gameInstructions = GameInstructions()
         self.pauseStatus = False
-        #What stage of the interface the game is on
+        
+        # What stage of the interface the game is on
         self.state = 'menu'
         
-        #Size of the window
-        #self.size = [550,500]
+        # Display objects for the GUI
         self.startGameButton = pygame.Rect(50,200,200,100)
         self.exitGameButton = pygame.Rect(300,200,200,100)
         self.diff0Button = pygame.Rect(100,400,50,50)
@@ -45,6 +47,8 @@ class MainMenu :
         
         self.updateState()
 
+
+    # Changed representation by python of object for ease of testing
     def __repr__(self) :
         return (str(self.startGameButton)+str(self.exitGameButton)+str(self.diff0Button)+ str(self.diff1Button) + str(self.diff2Button) + str(self.state))
 
@@ -61,6 +65,7 @@ class MainMenu :
 
         if self.STATES.count(newState)==1 : self.state = newState
         if self.state =='menu' : self.pauseStatus = False
+        if self.state == 'instructions' : self.pauseStatus = False
         if self.state=='game' :
             if not(self.pauseStatus) :
                 self.gameMap = PlayMap()
@@ -83,6 +88,8 @@ class MainMenu :
         #print "MainMenu.updateState ran"
         if self.state=='menu' :
             return [self.startGameButton,self.exitGameButton,self.diff0Button,self.diff1Button,self.diff2Button]
+        if self.state=='instructions' :
+            return self.gameInstructions.getCurrentState()
         if self.state=='game' :
             self.gameMap.updateState()
             return self.gameMap.getCurrentState()     

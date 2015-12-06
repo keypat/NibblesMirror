@@ -16,7 +16,9 @@ class GameOver:
             input:none
             output:none
         """
-        self.score = score
+        self.retryMessage = 'Retry [SPACE]'
+        self.exitMessage = 'Quit [q]'
+        self.score = 'Game Over!       SCORE: '+str(score)
         self.retryButton = pygame.Rect(100,200,150,100)
         self.exitButton = pygame.Rect(300,200,150,100)
         
@@ -28,7 +30,7 @@ class GameOver:
             input:integer value for score
             output:none
         """
-        self.score=score
+        self.score='Game Over!       SCORE: ' + str(score)
         
     def getCurrentState(self) :
         """
@@ -38,4 +40,4 @@ class GameOver:
             input:none
             output:an array of objects
         """
-        return [self.score,self.retryButton,self.exitButton]
+        return [self.score,self.retryButton,self.retryMessage,self.exitButton,self.exitMessage]

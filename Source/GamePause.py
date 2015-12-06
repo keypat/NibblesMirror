@@ -17,7 +17,10 @@ class GamePause:
             input:none
             output:none
         """
-        self.score = score
+        self.menuMessage = 'Menu [m]'
+        self.resumeMessage = 'Resume [SPACE]'
+        self.exitMessage = 'Quit [q]'
+        self.score = 'Game Paused!       SCORE: ' + str(score)
         self.exitButton = pygame.Rect(200,350,150,100)
         self.resumeButton = pygame.Rect(100,200,150,100)
         self.menuButton = pygame.Rect(300,200,150,100)
@@ -30,7 +33,7 @@ class GamePause:
             input:integer value for score
             output:none
         """
-        self.score=score
+        self.score='Game Paused!       SCORE: ' + str(score)
         
     def getCurrentState(self) :
         """
@@ -40,4 +43,4 @@ class GamePause:
             input:none
             output:an array of objects
         """
-        return [self.score,self.resumeButton,self.menuButton,self.exitButton]
+        return [self.score,self.resumeButton,self.resumeMessage,self.menuButton,self.menuMessage,self.exitButton,self.exitMessage]
