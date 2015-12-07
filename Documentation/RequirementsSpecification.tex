@@ -4,6 +4,7 @@
 \usepackage{amsmath, mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{color}
 \usepackage{graphicx}
 \usepackage{colortbl}
 \usepackage{xr}
@@ -15,6 +16,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage{ulem}
 
 %\usepackage{refcheck}
 
@@ -26,55 +28,7 @@
     filecolor=magenta,      % color of file links
     urlcolor=cyan           % color of external links
 }
-\newcommand{\NN}[1]{{\color{red}#1}}
-\newcommand{\WSS}[1]{{\color{blue}#1}}
 
-\newcommand{\colZwidth}{1.0\textwidth}
-\newcommand{\blt}{- } %used for bullets in a list
-\newcommand{\colAwidth}{0.13\textwidth}
-\newcommand{\colBwidth}{0.82\textwidth}
-\newcommand{\colCwidth}{0.1\textwidth}
-\newcommand{\colDwidth}{0.05\textwidth}
-\newcommand{\colEwidth}{0.8\textwidth}
-\newcommand{\colFwidth}{0.17\textwidth}
-\newcommand{\colGwidth}{0.5\textwidth}
-\newcommand{\colHwidth}{0.28\textwidth}
-\newcounter{defnum} %Definition Number
-\newcommand{\dthedefnum}{GD\thedefnum}
-\newcommand{\dref}[1]{GD\ref{#1}}
-\newcounter{datadefnum} %Datadefinition Number
-\newcommand{\ddthedatadefnum}{DD\thedatadefnum}
-\newcommand{\ddref}[1]{DD\ref{#1}}
-\newcounter{theorynum} %Theory Number
-\newcommand{\tthetheorynum}{T\thetheorynum}
-\newcommand{\tref}[1]{T\ref{#1}}
-\newcounter{tablenum} %Table Number
-\newcommand{\tbthetablenum}{T\thetablenum}
-\newcommand{\tbref}[1]{TB\ref{#1}}
-\newcounter{assumpnum} %Assumption Number
-\newcommand{\atheassumpnum}{P\theassumpnum}
-\newcommand{\aref}[1]{A\ref{#1}}
-\newcounter{goalnum} %Goal Number
-\newcommand{\gthegoalnum}{P\thegoalnum}
-\newcommand{\gsref}[1]{GS\ref{#1}}
-\newcounter{instnum} %Instance Number
-\newcommand{\itheinstnum}{IM\theinstnum}
-\newcommand{\iref}[1]{IM\ref{#1}}
-\newcounter{reqnum} %Requirement Number
-\newcommand{\rthereqnum}{P\thereqnum}
-\newcommand{\rref}[1]{R\ref{#1}}
-\newcounter{lcnum} %Likely change number
-\newcommand{\lthelcnum}{LC\thelcnum}
-\newcommand{\lcref}[1]{LC\ref{#1}}
-
-\newcommand{\tclad}{T_\text{CL}}
-\newcommand{\degree}{\ensuremath{^\circ}}
-\newcommand{\progname}{SWHS}
-
-%\oddsidemargin 0mm
-%\evensidemargin 0mm
-%\textwidth 160mm
-%\textheight 200mm
 \usepackage{fullpage}
 
 \begin{document}
@@ -87,12 +41,24 @@ SNAKE
 	
 \maketitle
 
+\section*{Revisions}
+\addcontentsline{toc}{section}{Revisions}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{10cm} | p{4cm} |}
+	\caption{Revisions} \\ \hline \label{TblInputVar} 
+	Name & Date & Description\\ \hline
+	\textcolor{blue}{Keyur Patel} & \textcolor{blue}{06/12/2015} &  \textcolor{blue}{Created Revision Table}\\ \hline
+	\textcolor{blue}{Keyur Patel} & \textcolor{blue}{06/12/2015} &  \textcolor{blue}{Fixed up Requirements and numbering}\\ \hline
+	\textcolor{blue}{Alex Guerrero} & \textcolor{blue}{06/12/2015} &  \textcolor{blue}{Fixed up Requirements and numbering}\\
+	\end{longtable}
+\end{center}
+
 \tableofcontents
 \newpage
 
 
-\section{Project Drivers}
-
+\section*{Project Drivers}
+\addcontentsline{toc}{section}{Project Drivers}
 \subsection{The Purpose of the Project}
 
 		The purpose of Snake is to help users have fun. Snake is designed to engage users in an enjoyable activity which encourages them to use strategic planning and time management to achieve higher and higher scores.
@@ -101,7 +67,8 @@ SNAKE
 
 The client for this project is the administrative staff that teach SFWR ENG 3XA3. This includes Dr. Smith, and the teaching assistants for the course. They are the recipients of the course work and are responsible for the supervision and evaluation of the product. Other stakeholders include the team members working on the project, and classmates who would want to critique and enjoy playing the game. This product will be (potentially) available as an open source software to the online community. This group of users can vary from beginner programmers to professionals in the computing industry. Beginner programmers are the lowest level of users because this product is delivered in a programming language and uses libraries that does not allow it to be packaged into an executable.
 
-\section{Project Constraints}
+\section*{Project Constraints}
+\addcontentsline{toc}{section}{Project Constraints}
 
 \subsection{Mandated Constraints}
 
@@ -126,7 +93,9 @@ There is a time constraint for this product which says that it must be completed
 
 The existing application only has 91 lines of Python code, which provides the barebones of the ideal snake game. There is no documentation for this code and it has not been modularized.
 
-\section{Functional Requirements}
+\section*{Functional Requirements}
+\addcontentsline{toc}{section}{Functional Requirements}
+
 \subsection{The Scope of the Work}
 The scope of the work is limited to a simple redevelopment and implementation of the Snake game.
 
@@ -138,17 +107,29 @@ Refer to The Scope of the Work.
 
 \subsection{Functional Requirements}
 \begin{itemize}
-\item R1: The player must be able to start the game by a single click.
-\item R2: The snake must be controlled by the keyboard.
-\item R3: When the snake hits an obstacle, the game must freeze indicating that the game is over.
-\item R4: When the snake collects ‘food’ its length grows by 1 unit.
-\item R5: As the player advances in the game, the snake moves faster.
-\item R6: When the snake hits the border or itself, the game is over.
-\item R7: The game calculates a score that is based on the length of the snake and the amount of time the player managed to play for without hitting any obstacle.
-\item R8: The game outputs the score after the game is finished.
+\item \sout{ R1: The player must be able to start the game by a single click.}
+\item R1: \textcolor{blue}{The game must start with a main menu screen with a play game button, quit game button, and three difficulty buttons from 1-3}
+
+
+\item R2: \textcolor{blue}{When the play game button is pressed, and instruction will appear and wait for user input.}
+\item R3: \textcolor{blue}{The snake must be controlled by the \sout{keyboard.} w, a, s, d or directional keys.}
+\item \sout{R3: When the snake hits an obstacle, the game must freeze indicating that the game is over.}
+\item R4: \textcolor{blue}{If the snake goes over the same location of a food object, a new food object will be generated and the snake will grow.}
+\item R5: \textcolor{blue}{Preceeding the instructions screen, the gameboard will appear with a single snake and food object.}
+
+\item R6: \textcolor{blue}{Pressing the esc key during the game brings up a pause screen that displays resume, main menu and quit game buttons.}
+\item R7: As the player advances in the game, the snake moves faster.
+\item R8: When the snake hits the border or itself \textcolor{blue}{(after power up is used)}, the game is over.
+\item R9: The game calculates a score that is based on the length of the snake. \sout{and the amount of time the player managed to play for without hitting any obstacle.}
+\item R10: \textcolor{blue}{The game over screen displays the score and a retry buttons and quit game button.} \sout{outputs the score after the game is finished.}
+\item R11: \textcolor{blue}{The snake will start with a power up that allows the player to collide with the snake body once without consequence.}
+
+
 \end{itemize}
 
-\section{Non-functional Requirements} 
+\section*{Non-functional Requirements}
+\addcontentsline{toc}{section}{Non-functional Requirements} 
+
 \subsection{Look and Feel Requirements}
 \subsubsection*{Appearance Requirements}
 \begin{itemize}
@@ -272,7 +253,8 @@ Not Applicable for this project.
 \subsubsection*{Standards Requirements}
 Not Applicable for this Project.
 
-\section{Project Issues}
+\section*{Project Issues}
+\addcontentsline{toc}{section}{Project Issues}
 
 \subsection{Open Issues}
 	Currently there are no open issues to be considered.
@@ -304,14 +286,5 @@ Not Applicable for this Project.
 	The Freeze feature would slow the snake. This is a feature that is exceptionally handy when the snake is moving really fast at much later stages of the game.
 \subsection{Ideas for Solutions}
 	Not Applicable to this project.
-
-%FOR REFERENCE
-%\item[GS\refstepcounter{goalnum}\thegoalnum:] The game must serve as a source of entertainment for the user.
-
-
-
-
-\bibliographystyle {plain}
-\bibliography {PCM_SRS}
 
 \end{document}
