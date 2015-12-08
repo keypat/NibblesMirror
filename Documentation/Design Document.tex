@@ -1,5 +1,23 @@
 \documentclass[12pt]{article}
 
+\usepackage{bm}
+\usepackage{amsmath, mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{ulem}
+
+
 \usepackage{fullpage}
 \usepackage{pdfpages}
 \usepackage[round]{natbib}
@@ -34,9 +52,24 @@ Shafeeq Rabbani}
 
 \newpage
 
-\section{Introduction}
+\section{Revision History}
 
-The following documentation is intended elaborate how the design of the snake game is implemented. The document will also explain how the functional and non-functional requirements mentioned in the Software Requirements Specification will be explained. This document is intended for the following readers:
+\addcontentsline{toc}{section}{Revisions}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{10cm} | p{4cm} |}
+	\caption{Revisions} \\ \hline \label{TblInputVar} 
+	Name & Date & Description\\ \hline
+	\textcolor{blue}{Shafeeq Rabbani} & \textcolor{blue}{08/12/2015} &  \textcolor{blue}{Created Revision Table}\\\hline
+	\textcolor{blue}{Shafeeq Rabbani} & \textcolor{blue}{08/12/2015} &  \textcolor{blue}{Project description added to Introduction}\\ \hline
+	\textcolor{blue}{Shafeeq Rabbani} & \textcolor{blue}{08/12/2015} &  \textcolor{blue}{Fixed section 5.1.1 (now 6.1.1}\\ 
+	\end{longtable}
+\end{center}
+
+\section{Introduction}
+\textcolor{blue}{This project is about the redevelopment of the Snake game. The Snake game is a traditional computer game which involves the player controlling a 'snake' on the screen that swallows 'food' that randomly appears on the screen, growing in size every time it does so. The player should avoid hitting the snake into itself and the borders around its space as this would end the game. }
+
+
+The following documentation is intended elaborate how the design of the snake game is implemented. The document will also examine the details of the functional and non-functional requirements mentioned in the Software Requirements Specification. This document is intended for the following readers:
 
 \begin{itemize}
 \item Designers: The document can serve to ensure that all functional and non-functional requirements are met. Further, designers can also use this document to verify any discrepancies among different modules.
@@ -167,17 +200,12 @@ AC7 & M7\\
 
 
 \begin{description}
-
-\item[Secrets:] The generation of food location.
-\item[Services:] Places food in a random location on the play map.
-\item[Implemented By:] SWHS
+\color{blue}
 \item[Secrets:]The structure of the Food
-\item[Services:]generates and stores a Food object in a random position
-
+\item[Services:] Generates and stores a Food object in a random position
+\item[Implemented By:] SWHS
 \end{description}
-
 \subsubsection{GameOver Module (M2)}
-
 
 \begin{description}
 
