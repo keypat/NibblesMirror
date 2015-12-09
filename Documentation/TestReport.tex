@@ -49,6 +49,8 @@
 	Alex Guerrero & 27/11/2015 & Edited Structural Testing\\ \hline
 	
 		Shafeeq Rabbani & 27/11/2015 & Edited Usability Testing\\ \hline
+		Shafeeq Rabbani & 08/12/2015 & Added Coverage Matrix\\ \hline  
+		Shafeeq Rabbani & 08/12/2015 & Added Summary of Results\\ \hline
 	\end{longtable}
 \end{center}
 
@@ -468,5 +470,43 @@ After: \pagebreak\includegraphics[width=\textwidth]{crash.png}\\
 \textbf{Expected:} Pressing q quits the program.\\
 \textbf{Output:} Pass.\\
 Program window successfully closed in all three test cases.\\
+\newpage
+\color{blue}
+\section{Coverage Matrix}
+Everything from the list of functional requirements was tested to ensure that it was operating as intended. The table below shows the coverage matrix with the functional requirements and whether the particular requirement was met.
+
+\begin{center}
+	\begin{longtable}{| p{10cm} | p{3cm} |}
+	\caption{Coverage Matrix Table} \\ \hline \label{CoverageMatrix} 
+	Requirement & Test Result \\ \hline
+R1: The game must start with a main menu screen with a play game button, quit game button, and three difficulty buttons from 1-3 & Pass  \\ \hline
+	R2: When the play game button is pressed, and instruction will appear and wait for
+user input.& Pass  \\ \hline
+	R3: The snake must be controlled by the keyboard. w, a, s, d or directional keys. & Pass  \\ \hline
+	R4: If the snake goes over the same location of a food object, a new food object will
+be generated and the snake will grow. & Pass  \\ \hline
+	R5: Preceeding the instructions screen, the gameboard will appear with a single snake
+and food object. & Pass  \\ \hline
+R6: Pressing the esc key during the game brings up a pause screen that displays
+resume, main menu and quit game buttons.& Pass  \\ \hline
+	R7: As the player advances in the game, the snake moves faster. & Pass \\ \hline
+	R8: When the snake hits the border or itself (after power up is used), the game is over. & Pass  \\ \hline
+	R9: The game calculates a score that is based on the length of the snake. & Pass  \\ \hline
+	R10: The game over screen displays the score and a retry buttons and quit game
+button. & Pass  \\ \hline
+	R11: The snake will start with a power up that allows the player to collide with the
+snake body once without consequence. & Pass  \\ \hline
+	
+
+	\end{longtable}
+\end{center}
+\newpage
+\section{Summary of Results}
+The code of the Snake game has been split up into modules. This allows for unit testing to occur. All the modules were thoroughly tested and checked for robustness.
+
+Usability testing was also carried out by allowing gamers to have a chance to play the game first hand and fill out the a survey about their experience playing the game.
+
+The results of the tests were promising and it can be concluded that the Snake Game is ready to be released.
 
 \end{document}
+
