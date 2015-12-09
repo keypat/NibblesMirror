@@ -37,7 +37,7 @@
 <font color="#000000" face="helvetica, arial"><a name="PlayMap">class <strong>PlayMap</strong></a></font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#PlayMap">PlayMap</a>&nbsp;has&nbsp;state&nbsp;variables:<br>
+<td colspan=2><tt>Environment&nbsp;variables:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:integer<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;integer<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;snake:&nbsp;Snake&nbsp;object<br>
@@ -78,6 +78,12 @@ output:an&nbsp;array&nbsp;of&nbsp;objects</tt></dd></dl>
 Transition:&nbsp;checks&nbsp;whether&nbsp;snake&nbsp;violates&nbsp;any&nbsp;rules&nbsp;of&nbsp;life<br>
 input:none<br>
 output:Boolean&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PlayMap-setDiff"><strong>setDiff</strong></a>(self, difficulty)</dt><dd><tt>function&nbsp;to&nbsp;set&nbsp;the&nbsp;base&nbsp;difficulty&nbsp;of&nbsp;the&nbsp;game&nbsp;(speed&nbsp;of&nbsp;snake)<br>
+&nbsp;<br>
+transition:&nbsp;updates&nbsp;the&nbsp;difficulty&nbsp;of&nbsp;the&nbsp;game<br>
+input:&nbsp;integer&nbsp;to&nbsp;represent&nbsp;difficulty<br>
+output:&nbsp;none</tt></dd></dl>
 
 <dl><dt><a name="PlayMap-updateState"><strong>updateState</strong></a>(self)</dt><dd><tt>function&nbsp;to&nbsp;update&nbsp;the&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;game&nbsp;board<br>
 aka&nbsp;what&nbsp;is&nbsp;the&nbsp;state&nbsp;one&nbsp;time&nbsp;unit&nbsp;in&nbsp;the&nbsp;future<br>

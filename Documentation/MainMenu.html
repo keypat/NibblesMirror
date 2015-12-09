@@ -37,12 +37,20 @@
 <font color="#000000" face="helvetica, arial"><a name="MainMenu">class <strong>MainMenu</strong></a></font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#MainMenu">MainMenu</a>&nbsp;has&nbsp;state&nbsp;variables:<br>
+<td colspan=2><tt>Environment&nbsp;variables:<br>
+&nbsp;<br>
 gameMap:&nbsp;PlayMap&nbsp;object<br>
 gameOver:&nbsp;GameOver&nbsp;object<br>
+gameInstructions:&nbsp;GameInstructions&nbsp;object<br>
+gamePause:&nbsp;GamePause&nbsp;object<br>
+&nbsp;<br>
+pauseStatus:&nbsp;boolean<br>
 state:&nbsp;string<br>
 startGameButton:&nbsp;pygame.Rect&nbsp;object<br>
 exitGameButton:&nbsp;pygame.Rect&nbsp;object<br>
+diff0Button:&nbsp;pygame.Rect&nbsp;object<br>
+diff1Button:&nbsp;pygame.Rect&nbsp;object<br>
+diff2Button:&nbsp;pygame.Rect&nbsp;object<br>
 &nbsp;<br>
 Assumptions:&nbsp;<a href="#MainMenu-__init__">__init__</a>()&nbsp;is&nbsp;called&nbsp;before&nbsp;any&nbsp;other&nbsp;access&nbsp;program<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
@@ -50,6 +58,9 @@ Assumptions:&nbsp;<a href="#MainMenu-__init__">__init__</a>()&nbsp;is&nbsp;calle
 <dl><dt><a name="MainMenu-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;for&nbsp;<a href="#MainMenu">MainMenu</a>&nbsp;class<br>
 Transition:&nbsp;initialized&nbsp;to&nbsp;main&nbsp;menu&nbsp;state<br>
 exception:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="MainMenu-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>built&nbsp;in&nbsp;python&nbsp;method&nbsp;to&nbsp;change&nbsp;representation&nbsp;of&nbsp;objects.<br>
+Used&nbsp;it&nbsp;to&nbsp;assist&nbsp;with&nbsp;automated&nbsp;testing.</tt></dd></dl>
 
 <dl><dt><a name="MainMenu-changeState"><strong>changeState</strong></a>(self, newState)</dt><dd><tt>function&nbsp;to&nbsp;change&nbsp;the&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;main&nbsp;menu<br>
 Transition:&nbsp;self.<strong>state</strong>&nbsp;is&nbsp;updated&nbsp;to&nbsp;new&nbsp;state<br>
